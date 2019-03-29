@@ -16,7 +16,7 @@ get_header();
 the_breadcrumb();
 ?>
             </p>
-            <h1 class="breadcrambs-h1">Производство</h1>
+            <h1 class="breadcrambs-h1"><?PHP echo get_post_field('post_title', 25, 'db'); ?></h1>
           </div>
         </div>
         <div class="gray-bg">
