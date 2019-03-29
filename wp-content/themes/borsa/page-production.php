@@ -14,8 +14,8 @@ get_header();
           <div class="container">
             <p class="breadcrambs">
             <?php
-the_breadcrumb();
-?>
+            the_breadcrumb();
+            ?>
             </p>
             <h1 class="breadcrambs-h1"><?PHP echo get_post_field('post_title', 25, 'db'); ?></h1>
           </div>
