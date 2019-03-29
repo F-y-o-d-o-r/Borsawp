@@ -5,6 +5,7 @@ Template Name: production
 Template Post Type: page
  */
 get_header();
+
 ?>
 
 <main>
@@ -84,10 +85,14 @@ the_breadcrumb();
         <div class="container"><img class="close-popup" src="<?PHP bloginfo('template_url');?>/img/close.svg" alt="close" id="closePopup">
           <div class="hidden-slider-wrapper">
             <div class="slick-popup-slider" id="slick">
-              <div class="slide" style="background-image: url('img/slider/one.jpg')"></div>
-              <div class="slide" style="background-image: url('img/slider/three.jpg')"></div>
-              <div class="slide" style="background-image: url('img/slider/one.jpg')"></div>
-              <div class="slide" style="background-image: url('img/slider/three.jpg')"></div>
+            <?php
+            $num = carbon_get_post_meta( get_the_ID(), 'crb1_media_gallery' );
+            foreach ($num as $link) {
+              ?>
+              <div class="slide" style="background-image: url('<?PHP echo wp_get_attachment_image_url( $link, 'full' ); ?>')"></div>
+              <?PHP
+            }
+            ?>
             </div>
             <div class="hidden-slick-btns-wrapper"></div>
           </div>

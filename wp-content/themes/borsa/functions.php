@@ -189,5 +189,14 @@ function the_breadcrumb()
 // START CarbonFields
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
+// настройки темы
+add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' );
+function crb_attach_theme_options() {
+    Container::make( 'post_meta', 'Slider' )
+    ->where( 'post_id', '=', '25' )
+    ->add_fields( array(
+        Field::make( 'media_gallery', 'crb1_media_gallery', __( 'Media Gallery' ) )
+    ));
+}
 
 // END CarbonFields
