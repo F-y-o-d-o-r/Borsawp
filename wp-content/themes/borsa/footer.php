@@ -49,7 +49,7 @@
     </footer>
     <section class="popup-wrapper dnone">
       <div class="container">
-        <div class="content-wrapper clearfix"><img class="close" src="<?PHP bloginfo('template_url');?> /img/closesort.svg" alt="close"><img class="mail" src="<?PHP bloginfo('template_url');?> /img/advantages/customerservice.svg" alt="thanks">
+        <div class="content-wrapper clearfix"><img class="close" src="<?PHP bloginfo('template_url');?> /img/closesort.svg" alt="close"><img class="mail" src="<?PHP bloginfo('template_url');?>/img/advantages/customerservice.svg" alt="thanks">
           <h4>Отлично, ваша заявка принята!</h4>
           <p>Мы успешно записали ваш номер телефона. В течении 30 минут наши менеджеры свяжутся с вами для обсуждения всех интересующих вас вопросов. Хорошего вам дня!</p>
         </div>

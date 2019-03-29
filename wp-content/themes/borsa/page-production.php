@@ -22,6 +22,7 @@ the_breadcrumb();
         <div class="gray-bg">
           <div class="container">
           <?PHP echo get_post_field('post_content', 25, 'db'); ?>
+          
             <!-- <div class="subheader">ООО «Борса» – Это современное производство полимерной продукции полного цикла. Мы изготавливаем полипропиленовые мешки, мягкие контейнеры, полиэтиленовую пленку — самые востребованные типы упаковки.</div>
             <div class="img-2-wrapper">
               <div class="img" style="background-image:url('img/prodaction1.jpg')"></div>
@@ -80,7 +81,7 @@ the_breadcrumb();
       </section> 
       <!--START Popup slider-->
       <div class="hidden-slider-popup dnone" id="testslider2">
-        <div class="container"><img class="close-popup" src="img/close.svg" alt="close" id="closePopup">
+        <div class="container"><img class="close-popup" src="<?PHP bloginfo('template_url');?>/img/close.svg" alt="close" id="closePopup">
           <div class="hidden-slider-wrapper">
             <div class="slick-popup-slider" id="slick">
               <div class="slide" style="background-image: url('img/slider/one.jpg')"></div>
