@@ -32,6 +32,7 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="msapplication-config" content="<?PHP bloginfo('template_url');?> /img/favicon/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
   <?php wp_head();?>
 </head>
