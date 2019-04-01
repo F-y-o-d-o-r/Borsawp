@@ -198,5 +198,12 @@ function crb_attach_theme_options() {
         Field::make( 'media_gallery', 'crb1_media_gallery', __( 'Media Gallery' ) )
     ));
 }
+add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options1' );
+function crb_attach_theme_options1() {
+    Container::make( 'term_meta', 'IMG' )
+    ->add_fields( array(
+      Field::make( 'image', 'thumb', 'Миниатюра' ),
+    ) );
+}
 
 // END CarbonFields
