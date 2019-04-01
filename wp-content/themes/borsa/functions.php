@@ -175,7 +175,7 @@ function the_breadcrumb()
         if (is_category() || is_single()) {
             the_category(' ');
             if (is_single()) {
-                echo " » ";
+                echo " / ";
                 the_title();
             }
         } elseif (is_page()) {
@@ -196,6 +196,23 @@ function crb_attach_theme_options() {
     ->where( 'post_id', '=', '25' )
     ->add_fields( array(
         Field::make( 'media_gallery', 'crb1_media_gallery', __( 'Media Gallery' ) )
+    ));
+    Container::make( 'post_meta', 'Table' )
+    ->show_on_post_type('post')
+    ->add_fields( array(
+      Field::make( 'complex', 'prod_main_slider_complex', 'Слайдер продукта' )
+              ->add_fields( array(
+                Field::make( 'text', 'prod_main_slide_name', 'Описание' ),
+                Field::make("image", "prod_main_slider", "Фото для главного слайдера"),
+              )
+              )
+              ->help_text( 'Перечислите всех, кто помогал Вам написать статью.' ),
+      Field::make("rich_text", "prod_table_cont", "Характеристики контейнеров")
+      ->help_text('Характеристики контейнеров'),
+      Field::make('text', 'prod_info', 'Info продукта'),
+      Field::make("image", "prod_photo", "Фото для вызова слайдера"),
+      Field::make('text', 'prod_slider_text', 'Текст под слайдером'),
+      Field::make( 'media_gallery', 'prod_hidden_gallery', __( 'Слайдер скрытый' ) )
     ));
 }
 add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options1' );

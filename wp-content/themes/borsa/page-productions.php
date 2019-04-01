@@ -35,7 +35,7 @@ $categories = get_categories( array(
           if( $categories ){
             foreach( $categories as $category ){
               // Получаем ID таксономии
-              $term_id = $category->term_id;;
+              $term_id = $category->term_id;
               // получим ID картинки из метаполя термина
               $term_thumbnail_id = carbon_get_term_meta( $term_id, 'thumb');
               // ссылка на полный размер картинки по ID вложения
