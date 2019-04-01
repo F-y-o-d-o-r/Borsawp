@@ -1,10 +1,10 @@
 <?php
 get_header();
-
+$thisCat = get_category( get_query_var('cat') );
 // параметры по умолчанию
 $posts = get_posts( array(
   'numberposts' => -1,
-  'category'    => get_the_category()[0]->cat_ID,
+  'category'    => $thisCat->cat_ID,
   'orderby'     => 'date',
   'order'       => 'DESC',
   'include'     => array(),
@@ -14,7 +14,6 @@ $posts = get_posts( array(
   'post_type'   => 'post',
   'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
 ) );
-
 ?>
 
 <main>
@@ -24,7 +23,6 @@ $posts = get_posts( array(
             <a href='/'>Главная / </a>
             <a href='/products/'>Продукция / </a>
             <?php
-              $thisCat = get_category( get_query_var('cat') );
               echo $thisCat->name;
               // the_breadcrumb();
             ?>
