@@ -14,11 +14,9 @@ get_header();
           <div class="product-description-wrapper">
             <div class="slider-wrapper">
               <div class="slick-product-slider">
-              <?PHP 
+              <?PHP
               $data = carbon_get_post_meta( $post->ID, 'prod_main_slider_complex' );
               foreach ($data as $value) {
-                // echo $value['prod_main_slider'];
-                // echo wp_get_attachment_image_url($value['prod_main_slider'], large);
                 ?>
                 <div class="slide" style="background-image: url('<?PHP echo wp_get_attachment_image_url($value['prod_main_slider'], 'large'); ?>')"></div>
                 <?PHP
@@ -125,17 +123,17 @@ get_header();
           <h3 class="h3">Каждому клиенту дополнительно предлагаем:</h3>
           <div class="advantages">
             <div class="advantage">
-              <div class="advantage__img" style="background-image:url('img/advantages/pallet.svg')"></div>
+              <div class="advantage__img" style="background-image:url('<?PHP bloginfo('template_url');?>/img/advantages/pallet.svg')"></div>
               <div class="advantage__header">1. Удобство транспортировки продукции</div>
               <div class="advantage__body">Контейнеры могут быть упакованы на европаллет, паллет наружного размера, пресс-кип</div>
             </div>
             <div class="advantage">
-              <div class="advantage__img" style="background-image:url('img/advantages/flyers.svg')"></div>
+              <div class="advantage__img" style="background-image:url('<?PHP bloginfo('template_url');?>/img/advantages/flyers.svg')"></div>
               <div class="advantage__header">2. Нанесение печати на продукцию</div>
               <div class="advantage__body">Возможность печати логотипа, технической информации и особенности эксплуатации</div>
             </div>
             <div class="advantage">
-              <div class="advantage__img" style="background-image:url('img/advantages/molecule.svg')"></div>
+              <div class="advantage__img" style="background-image:url('<?PHP bloginfo('template_url');?>/img/advantages/molecule.svg')"></div>
               <div class="advantage__header">3. Повышенная прочность продукции</div>
               <div class="advantage__body">Контейнер может быть изготовлен из ткани с улучшенными прочностными характеристиками для перевозки тяжёлых и острых грузов</div>
             </div>
@@ -144,7 +142,7 @@ get_header();
       </section>
       <section class="run-slider-wrapper">
         <div class="container">
-          <div class="link-wrapper"><a class="runSlider" href="#" title="title" data-slide="testslider1" style="background-image:url('img/slider/one.jpg')" id="runSlider">
+          <div class="link-wrapper"><a class="runSlider" href="#" title="title" data-slide="testslider1" style="background-image:url('<?PHP echo wp_get_attachment_image_url(carbon_get_the_post_meta('prod_photo'), 'large'); ?>')" id="runSlider">
               <div class="info-wrapper">
                 <div class="num">1/4</div>
                 <div class="more"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -157,14 +155,16 @@ get_header();
       </section>
       <!--START Popup slider-->
       <div class="hidden-slider-popup dnone" id="testslider1">
-        <div class="container"><img class="close-popup" src="img/close.svg" alt="close" id="closePopup">
+        <div class="container"><img class="close-popup" src="<?PHP bloginfo('template_url');?>/img/close.svg" alt="close" id="closePopup">
           <div class="hidden-slider-wrapper">
             <div class="slick-popup-slider" id="slick">
-              <div class="slide" style="background-image: url('img/slider/one.jpg')"></div>
-              <div class="slide" style="background-image: url('img/slider/one.jpg')"></div>
-              <div class="slide" style="background-image: url('img/slider/one.jpg')"></div>
-              <div class="slide" style="background-image: url('img/slider/one.jpg')"></div>
-              <div class="slide" style="background-image: url('img/slider/one.jpg')"></div>
+            <?PHP
+          foreach (carbon_get_the_post_meta('prod_hidden_gallery') as $key => $value) {
+            ?>
+              <div class="slide" style="background-image: url(<?PHP echo wp_get_attachment_image_url($value, 'large'); ?>)"></div>
+            <?PHP
+            }
+            ?>
             </div>
             <div class="hidden-slick-btns-wrapper"></div>
           </div>
@@ -181,12 +181,57 @@ get_header();
       <section class="product-page-more-wrapper">
         <div class="container">
           <h3 class="h3">Вас могут заинтересовать</h3>
-          <div class="products-wrapper"><a class="product-item" href="#" title="product"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div class="products-wrapper">
+            <?php
+            $categories = get_categories( array(
+              'taxonomy'     => 'category',
+              'type'         => 'post',
+              'child_of'     => 0,
+              'parent'       => '',
+              'orderby'      => 'name',
+              'order'        => 'ASC',
+              'hide_empty'   => 1,
+              'hierarchical' => 1,
+              'exclude'      => '',
+              'include'      => '',
+              'number'       => 0,
+              'pad_counts'   => false,
+              // полный список параметров смотрите в описании функции http://wp-kama.ru/function/get_terms
+            ) );
+            ?>
+            <?PHP
+          if( $categories ){
+            shuffle($categories);
+            $num = 0;
+            foreach( $categories as $category ){
+              if($num < 4) {
+              // Получаем ID таксономии
+              $term_id = $category->term_id;
+              // получим ID картинки из метаполя термина
+              $term_thumbnail_id = carbon_get_term_meta( $term_id, 'thumb');
+              // ссылка на полный размер картинки по ID вложения
+              $term_thumbnail_url = wp_get_attachment_image_url( $term_thumbnail_id, 'large' );
+              ?>
+              <a class="product-item" href="<?PHP echo get_category_link( $category->term_id ) ?>" title="<?PHP echo sprintf( __( "Вся продукция в категории в %s" ), $category->name ) ?>"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="15" cy="15" r="15" fill="#3ECC29" />
+                  <path d="M22.9471 14.6694H15.3306V7H14.6694V14.6694H7V15.3306H14.6694V23H15.3306V15.3306H23V14.6694H22.9471Z" fill="white" /></svg>
+                <div class="product-item__header"><?PHP echo $category->name ?></div>
+                <div class="product-item__image" style="background-image:url('<?PHP echo $term_thumbnail_url; ?>')"></div>
+              </a>
+              <?PHP
+              $num++;
+              }
+            }
+          }
+          ?>
+            <!-- <a class="product-item" href="#" title="product"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="15" cy="15" r="15" fill="#3ECC29" />
                 <path d="M22.9471 14.6694H15.3306V7H14.6694V14.6694H7V15.3306H14.6694V23H15.3306V15.3306H23V14.6694H22.9471Z" fill="white" /></svg>
               <div class="product-item__header">Строповые мягкие контейнеры</div>
               <div class="product-item__image" style="background-image:url(&quot;img/products/preview/1.jpg&quot;)"></div>
-            </a><a class="product-item" href="#" title="product"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            </a> -->
+
+            <!--<a class="product-item" href="#" title="product"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="15" cy="15" r="15" fill="#3ECC29" />
                 <path d="M22.9471 14.6694H15.3306V7H14.6694V14.6694H7V15.3306H14.6694V23H15.3306V15.3306H23V14.6694H22.9471Z" fill="white" /></svg>
               <div class="product-item__header">Ленточные мягкие контейнеры</div>
@@ -201,7 +246,8 @@ get_header();
                 <path d="M22.9471 14.6694H15.3306V7H14.6694V14.6694H7V15.3306H14.6694V23H15.3306V15.3306H23V14.6694H22.9471Z" fill="white" /></svg>
               <div class="product-item__header">Вагонный вкладыш</div>
               <div class="product-item__image" style="background-image:url(&quot;img/products/preview/4.jpg&quot;)"></div>
-            </a></div>
+            </a> -->
+            </div>
         </div>
       </section>
     </main>
