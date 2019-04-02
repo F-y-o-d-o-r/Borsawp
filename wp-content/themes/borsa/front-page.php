@@ -17,7 +17,7 @@ get_header();
               'post_type'   => 'slider',
               'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
             ) );
-            print_r($posts);
+            // print_r($posts);
             foreach( $posts as $post ){
                 // формат вывода the_title() ...
                 ?>

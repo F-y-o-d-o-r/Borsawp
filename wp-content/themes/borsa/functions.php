@@ -256,8 +256,8 @@ function crb_attach_theme_options1() {
       Field::make( 'image', 'thumb', 'Миниатюра' ),
     ) );
 }
-
 // END CarbonFields
+
 // START Post types
 add_action('init', 'slider_init');
 function slider_init(){
@@ -275,7 +275,6 @@ function slider_init(){
       'not_found_in_trash' => 'В корзине слайдов не найдено',
       'parent_item_colon'  => '',
       'menu_name'          => 'Слайдер'
-
       ),
     'public'             => true,
     'publicly_queryable' => true,
@@ -285,6 +284,37 @@ function slider_init(){
     'rewrite'            => true,
     'capability_type'    => 'post',
     'has_archive'        => true,
+    'hierarchical'       => false,
+    'menu_position'      => null,
+    'supports'           => array('title','editor','author','thumbnail','excerpt','comments')
+  ) );
+}
+
+add_action('init', 'news_init');
+function news_init(){
+  register_post_type('news', array(
+    'labels'             => array(
+      'name'               => 'Новости', // Основное название типа записи
+      'singular_name'      => 'Новость', // отдельное название записи типа Book
+      'add_new'            => 'Добавить новость',
+      'add_new_item'       => 'Добавить новую новость',
+      'edit_item'          => 'Редактировать новость',
+      'new_item'           => 'Новая новость',
+      'view_item'          => 'Посмотреть новость',
+      'search_items'       => 'Найти новость',
+      'not_found'          => 'Новость не найдена',
+      'not_found_in_trash' => 'В корзине новостей не найдено',
+      'parent_item_colon'  => '',
+      'menu_name'          => 'Новости'
+      ),
+    'public'             => true,
+    'publicly_queryable' => true,
+    'show_ui'            => true,
+    'show_in_menu'       => true,
+    'query_var'          => true,
+    'rewrite'            => true,
+    'capability_type'    => 'post',
+    'has_archive'        => false,
     'hierarchical'       => false,
     'menu_position'      => null,
     'supports'           => array('title','editor','author','thumbnail','excerpt','comments')
