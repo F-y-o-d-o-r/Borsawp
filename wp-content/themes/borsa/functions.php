@@ -192,11 +192,15 @@ use Carbon_Fields\Field;
 // настройки темы
 add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' );
 function crb_attach_theme_options() {
+  // производство page
     Container::make( 'post_meta', 'Slider' )
     ->where( 'post_id', '=', '25' )
     ->add_fields( array(
-        Field::make( 'media_gallery', 'crb1_media_gallery', __( 'Media Gallery' ) )
+      Field::make("image", "production_photo", "Фото для вызова слайдера"),
+      Field::make('text', 'production_slider_text', 'Текст под слайдером'),
+      Field::make( 'media_gallery', 'production_hidden_gallery', __( 'Слайдер скрытый' ) )
     ));
+    // product
     Container::make( 'post_meta', 'Table' )
     ->show_on_post_type('post')
     ->add_fields( array(
@@ -206,7 +210,7 @@ function crb_attach_theme_options() {
                 Field::make("image", "prod_main_slider", "Фото для главного слайдера"),
               )
               )
-              ->help_text( 'Перечислите всех, кто помогал Вам написать статью.' ),
+              ->help_text( 'Перечислите слайды.' ),
       Field::make('text', 'prod_info', 'Info продукта'),
       Field::make("rich_text", "prod_table_cont", "Характеристики контейнеров")
       ->help_text('Характеристики контейнеров'),
@@ -214,6 +218,21 @@ function crb_attach_theme_options() {
       Field::make('text', 'prod_slider_text', 'Текст под слайдером'),
       Field::make( 'media_gallery', 'prod_hidden_gallery', __( 'Слайдер скрытый' ) )
     ));
+    // diff theme settings
+    Container::make( 'theme_options', 'Borsa Options' )
+  ->add_fields(array(
+    Field::make('text', 'phone_one', 'Основной телефон'),
+    Field::make('text', 'phone_two', 'Отдел продаж'),
+    Field::make('text', 'email', 'Email'),
+    Field::make('text', 'adr_fact', 'Фактический адрес'),
+    Field::make('text', 'adr_ur', 'Юридический адрес'),
+    Field::make('text', 'adr_post', 'Почтовый адрес'),
+    Field::make('text', 'link_fb', 'Фейсбук'),
+    Field::make('text', 'link_insta', 'Инстаграм'),
+    Field::make('text', 'link_youtube', 'Ютуб'),
+    Field::make("file", "price", "ПРАЙС-ЛИСТ")
+    ->set_value_type('url') // сохранить в метаполе ссылку на файл
+  ));
 }
 add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options1' );
 function crb_attach_theme_options1() {
@@ -222,6 +241,7 @@ function crb_attach_theme_options1() {
       Field::make( 'image', 'thumb', 'Миниатюра' ),
     ) );
 }
+
 // END CarbonFields
 // START Post types
 add_action('init', 'slider_init');
