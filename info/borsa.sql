@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 02, 2019 at 10:18 AM
+-- Generation Time: Apr 02, 2019 at 10:33 AM
 -- Server version: 8.0.15
 -- PHP Version: 7.3.2
 
@@ -359,7 +359,7 @@ INSERT INTO `borsawp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) 
 (142, 55, '_edit_last', '1'),
 (145, 57, '_edit_lock', '1554125272:1'),
 (148, 57, '_edit_last', '1'),
-(151, 59, '_edit_lock', '1554189317:1'),
+(151, 59, '_edit_lock', '1554190381:1'),
 (154, 59, '_edit_last', '1'),
 (197, 71, '_edit_lock', '1554099520:1'),
 (198, 71, '_edit_last', '1'),
@@ -605,43 +605,9 @@ INSERT INTO `borsawp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) 
 (946, 101, '_prod_hidden_gallery|||12|value', '76'),
 (947, 101, '_prod_hidden_gallery|||13|value', '75'),
 (948, 101, '_prod_hidden_gallery|||14|value', '74'),
-(953, 59, '_prod_main_slider_complex|||0|value', '_'),
-(954, 59, '_prod_main_slider_complex|||1|value', '_'),
-(955, 59, '_prod_main_slider_complex|prod_main_slide_name|0|0|value', 'img 1'),
-(956, 59, '_prod_main_slider_complex|prod_main_slider|0|0|value', '83'),
-(957, 59, '_prod_main_slider_complex|prod_main_slide_name|1|0|value', 'img 2'),
-(958, 59, '_prod_main_slider_complex|prod_main_slider|1|0|value', '103'),
-(959, 59, '_prod_table_cont', 'table'),
-(960, 59, '_prod_info', 'info'),
-(961, 59, '_prod_photo', '33'),
-(962, 59, '_prod_slider_text', 'текст под слайдером'),
-(963, 59, '_prod_hidden_gallery|||0|value', '29'),
-(964, 59, '_prod_hidden_gallery|||1|value', '34'),
-(965, 59, '_prod_hidden_gallery|||2|value', '33'),
-(966, 59, '_prod_hidden_gallery|||3|value', '32'),
-(967, 59, '_prod_hidden_gallery|||4|value', '31'),
-(968, 59, '_prod_hidden_gallery|||5|value', '30'),
-(969, 101, '_prod_main_slider_complex|||0|value', '_'),
-(970, 101, '_prod_main_slider_complex|||1|value', '_'),
-(971, 101, '_prod_main_slider_complex|prod_main_slide_name|0|0|value', 'img 1'),
-(972, 101, '_prod_main_slider_complex|prod_main_slider|0|0|value', '83'),
-(973, 101, '_prod_main_slider_complex|prod_main_slide_name|1|0|value', 'img 2'),
-(974, 101, '_prod_main_slider_complex|prod_main_slider|1|0|value', '103'),
-(975, 101, '_prod_table_cont', 'table'),
-(976, 101, '_prod_info', 'info'),
-(977, 101, '_prod_photo', '33'),
-(978, 101, '_prod_slider_text', 'текст под слайдером'),
-(979, 101, '_prod_hidden_gallery|||0|value', '29'),
-(980, 101, '_prod_hidden_gallery|||1|value', '34'),
-(981, 101, '_prod_hidden_gallery|||2|value', '33'),
-(982, 101, '_prod_hidden_gallery|||3|value', '32'),
-(983, 101, '_prod_hidden_gallery|||4|value', '31'),
-(984, 101, '_prod_hidden_gallery|||5|value', '30'),
-(985, 106, '_edit_lock', '1554189502:1'),
+(985, 106, '_edit_lock', '1554189425:1'),
 (988, 106, '_thumbnail_id', '33'),
 (989, 106, '_edit_last', '1'),
-(990, 106, '_pingme', '1'),
-(991, 106, '_encloseme', '1'),
 (992, 106, '_prod_main_slider_complex|||0|_empty', ''),
 (993, 106, '_prod_table_cont', ''),
 (994, 106, '_prod_info', ''),
@@ -653,7 +619,41 @@ INSERT INTO `borsawp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) 
 (1000, 107, '_prod_info', ''),
 (1001, 107, '_prod_photo', ''),
 (1002, 107, '_prod_slider_text', ''),
-(1003, 107, '_prod_hidden_gallery|||0|_empty', '');
+(1003, 107, '_prod_hidden_gallery|||0|_empty', ''),
+(1042, 59, '_pingme', '1'),
+(1043, 59, '_encloseme', '1'),
+(1044, 59, '_prod_main_slider_complex|||0|value', '_'),
+(1045, 59, '_prod_main_slider_complex|||1|value', '_'),
+(1046, 59, '_prod_main_slider_complex|prod_main_slide_name|0|0|value', 'img 1'),
+(1047, 59, '_prod_main_slider_complex|prod_main_slider|0|0|value', '83'),
+(1048, 59, '_prod_main_slider_complex|prod_main_slide_name|1|0|value', 'img 2'),
+(1049, 59, '_prod_main_slider_complex|prod_main_slider|1|0|value', '103'),
+(1050, 59, '_prod_info', 'Мягкие'),
+(1051, 59, '_prod_table_cont', '<p>table</p>'),
+(1052, 59, '_prod_photo', '33'),
+(1053, 59, '_prod_slider_text', 'текст под слайдером'),
+(1054, 59, '_prod_hidden_gallery|||0|value', '29'),
+(1055, 59, '_prod_hidden_gallery|||1|value', '34'),
+(1056, 59, '_prod_hidden_gallery|||2|value', '33'),
+(1057, 59, '_prod_hidden_gallery|||3|value', '32'),
+(1058, 59, '_prod_hidden_gallery|||4|value', '31'),
+(1059, 59, '_prod_hidden_gallery|||5|value', '30'),
+(1060, 101, '_prod_main_slider_complex|||0|value', '_'),
+(1061, 101, '_prod_main_slider_complex|||1|value', '_'),
+(1062, 101, '_prod_main_slider_complex|prod_main_slide_name|0|0|value', 'img 1'),
+(1063, 101, '_prod_main_slider_complex|prod_main_slider|0|0|value', '83'),
+(1064, 101, '_prod_main_slider_complex|prod_main_slide_name|1|0|value', 'img 2'),
+(1065, 101, '_prod_main_slider_complex|prod_main_slider|1|0|value', '103'),
+(1066, 101, '_prod_info', 'Мягкие'),
+(1067, 101, '_prod_table_cont', '<p>table</p>'),
+(1068, 101, '_prod_photo', '33'),
+(1069, 101, '_prod_slider_text', 'текст под слайдером'),
+(1070, 101, '_prod_hidden_gallery|||0|value', '29'),
+(1071, 101, '_prod_hidden_gallery|||1|value', '34'),
+(1072, 101, '_prod_hidden_gallery|||2|value', '33'),
+(1073, 101, '_prod_hidden_gallery|||3|value', '32'),
+(1074, 101, '_prod_hidden_gallery|||4|value', '31'),
+(1075, 101, '_prod_hidden_gallery|||5|value', '30');
 
 -- --------------------------------------------------------
 
@@ -742,7 +742,7 @@ INSERT INTO `borsawp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, 
 (57, 1, '2019-04-01 09:41:37', '2019-04-01 06:41:37', '<!-- wp:paragraph -->\n<p>\n\nLorem ipsum dolor sit amet consectetur adipisicing elit. Labore, laudantium? Sunt aliquid aperiam minima illum dicta libero, explicabo, aspernatur aliquam numquam accusantium odit. Nemo similique quo doloremque quidem? Est, alias?Illo officia iusto molestiae temporibus ad mollitia commodi omnis, assumenda ab! Placeat doloremque, blanditiis nesciunt amet temporibus, et pariatur aut recusandae aperiam aliquid assumenda vitae eligendi error officiis quibusdam culpa.Eius vel officiis perferendis quaerat veritatis, aliquid doloremque adipisci nulla totam maiores aut non dolor aspernatur quo fuga molestias quisquam cumque accusantium mollitia beatae nobis similique dolorum nisi! Cupiditate, saepe.Est, vel commodi doloremque placeat aperiam hic cumque itaque quos vitae minus dolor provident magnam quaerat libero corporis repellendus tempora porro consequatur quia repudiandae temporibus beatae! Quibusdam, esse. Culpa, perspiciatis.Repudiandae officia amet alias iusto ratione quos quod, consequatur, vitae delectus voluptatibus ex perspiciatis sapiente. Modi fuga, consectetur adipisci magnam eveniet itaque eius, qui, non perferendis dolor consequatur saepe suscipit!Incidunt sit quasi aperiam, mollitia esse voluptates illo officiis asperiores rerum ullam omnis possimus nobis doloribus quibusdam aut, quod quidem quisquam vero culpa! Impedit suscipit sequi magni. Necessitatibus, excepturi aperiam!Tempore architecto error deserunt iusto consectetur aut a culpa mollitia, neque doloremque. Consectetur aliquam veniam voluptate odio sint! Saepe molestiae laboriosam modi nesciunt quibusdam optio consectetur officia ratione quae iusto.Mollitia, ut cumque. Culpa accusamus commodi, quasi laboriosam nam harum vel voluptate recusandae quis quia architecto maxime totam, in eaque. Cumque sit enim a dolorum fugit harum, aliquam cupiditate reprehenderit.Inventore accusamus, nulla nisi in aperiam quasi beatae. Quasi, quae illum? Minima temporibus explicabo, autem tenetur consectetur at voluptatibus aliquam sequi voluptatem deleniti ipsam molestias sit cupiditate voluptatum corporis fuga.Dicta laborum ratione dignissimos suscipit molestias, eaque fuga praesentium animi! Ipsum aliquid dolore unde earum tempora itaque minima nemo quisquam, molestiae, harum, optio quasi facere sequi dolorem similique officia! Fugiat!\n\n</p>\n<!-- /wp:paragraph -->', 'Четырехстроповые антистатические мягкие контейнеры', '', 'publish', 'open', 'open', '', '%d1%87%d0%b5%d1%82%d1%8b%d1%80%d0%b5%d1%85%d1%81%d1%82%d1%80%d0%be%d0%bf%d0%be%d0%b2%d1%8b%d0%b5-%d0%b0%d0%bd%d1%82%d0%b8%d1%81%d1%82%d0%b0%d1%82%d0%b8%d1%87%d0%b5%d1%81%d0%ba%d0%b8%d0%b5-%d0%bc%d1%8f', '', '', '2019-04-01 16:27:51', '2019-04-01 13:27:51', '', 0, 'http://borsawp/?p=57', 0, 'post', '', 0),
 (58, 1, '2019-04-01 09:41:37', '2019-04-01 06:41:37', '', 'Четырехстроповые антистатические мягкие контейнеры', '', 'inherit', 'closed', 'closed', '', '57-revision-v1', '', '', '2019-04-01 09:41:37', '2019-04-01 06:41:37', '', 57, 'http://borsawp/%d0%b1%d0%b5%d0%b7-%d1%80%d1%83%d0%b1%d1%80%d0%b8%d0%ba%d0%b8/57-revision-v1/', 0, 'revision', '', 0);
 INSERT INTO `borsawp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
-(59, 1, '2019-04-01 09:41:52', '2019-04-01 06:41:52', '<!-- wp:html -->\nОписание продукта 1\n<!-- /wp:html -->\n\n<!-- wp:paragraph -->\n<p></p>\n<!-- /wp:paragraph -->', 'Каркасные мягкие контейнеры', '', 'publish', 'open', 'open', '', '%d0%ba%d0%b0%d1%80%d0%ba%d0%b0%d1%81%d0%bd%d1%8b%d0%b5-%d0%bc%d1%8f%d0%b3%d0%ba%d0%b8%d0%b5-%d0%ba%d0%be%d0%bd%d1%82%d0%b5%d0%b9%d0%bd%d0%b5%d1%80%d1%8b', '', '', '2019-04-02 10:14:39', '2019-04-02 07:14:39', '', 0, 'http://borsawp/?p=59', 0, 'post', '', 0),
+(59, 1, '2019-04-01 09:41:52', '2019-04-01 06:41:52', '<!-- wp:html -->\nОписание продукта 1\n<!-- /wp:html -->\n\n<!-- wp:paragraph -->\n<p></p>\n<!-- /wp:paragraph -->', 'Каркасные мягкие контейнеры', '', 'publish', 'open', 'open', '', '%d0%ba%d0%b0%d1%80%d0%ba%d0%b0%d1%81%d0%bd%d1%8b%d0%b5-%d0%bc%d1%8f%d0%b3%d0%ba%d0%b8%d0%b5-%d0%ba%d0%be%d0%bd%d1%82%d0%b5%d0%b9%d0%bd%d0%b5%d1%80%d1%8b', '', '', '2019-04-02 10:20:48', '2019-04-02 07:20:48', '', 0, 'http://borsawp/?p=59', 0, 'post', '', 0),
 (60, 1, '2019-04-01 09:41:52', '2019-04-01 06:41:52', '', 'Каркасные мягкие контейнеры', '', 'inherit', 'closed', 'closed', '', '59-revision-v1', '', '', '2019-04-01 09:41:52', '2019-04-01 06:41:52', '', 59, 'http://borsawp/%d0%b1%d0%b5%d0%b7-%d1%80%d1%83%d0%b1%d1%80%d0%b8%d0%ba%d0%b8/59-revision-v1/', 0, 'revision', '', 0),
 (61, 1, '2019-04-01 09:42:37', '2019-04-01 06:42:37', '<div>\n<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, laudantium? Sunt aliquid aperiam minima illum dicta libero, explicabo, aspernatur aliquam numquam accusantium odit. Nemo similique quo doloremque quidem? Est, alias?</div>\n<div>Illo officia iusto molestiae temporibus ad mollitia commodi omnis, assumenda ab! Placeat doloremque, blanditiis nesciunt amet temporibus, et pariatur aut recusandae aperiam aliquid assumenda vitae eligendi error officiis quibusdam culpa.</div>\n<div>Eius vel officiis perferendis quaerat veritatis, aliquid doloremque adipisci nulla totam maiores aut non dolor aspernatur quo fuga molestias quisquam cumque accusantium mollitia beatae nobis similique dolorum nisi! Cupiditate, saepe.</div>\n<div>Est, vel commodi doloremque placeat aperiam hic cumque itaque quos vitae minus dolor provident magnam quaerat libero corporis repellendus tempora porro consequatur quia repudiandae temporibus beatae! Quibusdam, esse. Culpa, perspiciatis.</div>\n<div>Repudiandae officia amet alias iusto ratione quos quod, consequatur, vitae delectus voluptatibus ex perspiciatis sapiente. Modi fuga, consectetur adipisci magnam eveniet itaque eius, qui, non perferendis dolor consequatur saepe suscipit!</div>\n<div>Incidunt sit quasi aperiam, mollitia esse voluptates illo officiis asperiores rerum ullam omnis possimus nobis doloribus quibusdam aut, quod quidem quisquam vero culpa! Impedit suscipit sequi magni. Necessitatibus, excepturi aperiam!</div>\n<div>Tempore architecto error deserunt iusto consectetur aut a culpa mollitia, neque doloremque. Consectetur aliquam veniam voluptate odio sint! Saepe molestiae laboriosam modi nesciunt quibusdam optio consectetur officia ratione quae iusto.</div>\n<div>Mollitia, ut cumque. Culpa accusamus commodi, quasi laboriosam nam harum vel voluptate recusandae quis quia architecto maxime totam, in eaque. Cumque sit enim a dolorum fugit harum, aliquam cupiditate reprehenderit.</div>\n<div>Inventore accusamus, nulla nisi in aperiam quasi beatae. Quasi, quae illum? Minima temporibus explicabo, autem tenetur consectetur at voluptatibus aliquam sequi voluptatem deleniti ipsam molestias sit cupiditate voluptatum corporis fuga.</div>\n<div>Dicta laborum ratione dignissimos suscipit molestias, eaque fuga praesentium animi! Ipsum aliquid dolore unde earum tempora itaque minima nemo quisquam, molestiae, harum, optio quasi facere sequi dolorem similique officia! Fugiat!</div>\n</div>', 'Одностроповые мягкие контейнеры', '', 'inherit', 'closed', 'closed', '', '46-revision-v1', '', '', '2019-04-01 09:42:37', '2019-04-01 06:42:37', '', 46, 'http://borsawp/%d0%b1%d0%b5%d0%b7-%d1%80%d1%83%d0%b1%d1%80%d0%b8%d0%ba%d0%b8/46-revision-v1/', 0, 'revision', '', 0),
 (62, 1, '2019-04-01 09:42:48', '2019-04-01 06:42:48', '<!-- wp:paragraph -->\n<p>\n\nLorem ipsum dolor sit amet consectetur adipisicing elit. Labore, laudantium? Sunt aliquid aperiam minima illum dicta libero, explicabo, aspernatur aliquam numquam accusantium odit. Nemo similique quo doloremque quidem? Est, alias?Illo officia iusto molestiae temporibus ad mollitia commodi omnis, assumenda ab! Placeat doloremque, blanditiis nesciunt amet temporibus, et pariatur aut recusandae aperiam aliquid assumenda vitae eligendi error officiis quibusdam culpa.Eius vel officiis perferendis quaerat veritatis, aliquid doloremque adipisci nulla totam maiores aut non dolor aspernatur quo fuga molestias quisquam cumque accusantium mollitia beatae nobis similique dolorum nisi! Cupiditate, saepe.Est, vel commodi doloremque placeat aperiam hic cumque itaque quos vitae minus dolor provident magnam quaerat libero corporis repellendus tempora porro consequatur quia repudiandae temporibus beatae! Quibusdam, esse. Culpa, perspiciatis.Repudiandae officia amet alias iusto ratione quos quod, consequatur, vitae delectus voluptatibus ex perspiciatis sapiente. Modi fuga, consectetur adipisci magnam eveniet itaque eius, qui, non perferendis dolor consequatur saepe suscipit!Incidunt sit quasi aperiam, mollitia esse voluptates illo officiis asperiores rerum ullam omnis possimus nobis doloribus quibusdam aut, quod quidem quisquam vero culpa! Impedit suscipit sequi magni. Necessitatibus, excepturi aperiam!Tempore architecto error deserunt iusto consectetur aut a culpa mollitia, neque doloremque. Consectetur aliquam veniam voluptate odio sint! Saepe molestiae laboriosam modi nesciunt quibusdam optio consectetur officia ratione quae iusto.Mollitia, ut cumque. Culpa accusamus commodi, quasi laboriosam nam harum vel voluptate recusandae quis quia architecto maxime totam, in eaque. Cumque sit enim a dolorum fugit harum, aliquam cupiditate reprehenderit.Inventore accusamus, nulla nisi in aperiam quasi beatae. Quasi, quae illum? Minima temporibus explicabo, autem tenetur consectetur at voluptatibus aliquam sequi voluptatem deleniti ipsam molestias sit cupiditate voluptatum corporis fuga.Dicta laborum ratione dignissimos suscipit molestias, eaque fuga praesentium animi! Ipsum aliquid dolore unde earum tempora itaque minima nemo quisquam, molestiae, harum, optio quasi facere sequi dolorem similique officia! Fugiat!\n\n</p>\n<!-- /wp:paragraph -->', 'Двухстроповые мягкие контейнеры', '', 'inherit', 'closed', 'closed', '', '51-revision-v1', '', '', '2019-04-01 09:42:48', '2019-04-01 06:42:48', '', 51, 'http://borsawp/%d0%b1%d0%b5%d0%b7-%d1%80%d1%83%d0%b1%d1%80%d0%b8%d0%ba%d0%b8/51-revision-v1/', 0, 'revision', '', 0),
@@ -1130,13 +1130,13 @@ ALTER TABLE `borsawp_links`
 -- AUTO_INCREMENT for table `borsawp_options`
 --
 ALTER TABLE `borsawp_options`
-  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=324;
+  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=326;
 
 --
 -- AUTO_INCREMENT for table `borsawp_postmeta`
 --
 ALTER TABLE `borsawp_postmeta`
-  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1004;
+  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1076;
 
 --
 -- AUTO_INCREMENT for table `borsawp_posts`

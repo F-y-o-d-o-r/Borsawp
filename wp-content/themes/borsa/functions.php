@@ -207,9 +207,9 @@ function crb_attach_theme_options() {
               )
               )
               ->help_text( 'Перечислите всех, кто помогал Вам написать статью.' ),
+      Field::make('text', 'prod_info', 'Info продукта'),
       Field::make("rich_text", "prod_table_cont", "Характеристики контейнеров")
       ->help_text('Характеристики контейнеров'),
-      Field::make('text', 'prod_info', 'Info продукта'),
       Field::make("image", "prod_photo", "Фото для вызова слайдера"),
       Field::make('text', 'prod_slider_text', 'Текст под слайдером'),
       Field::make( 'media_gallery', 'prod_hidden_gallery', __( 'Слайдер скрытый' ) )
