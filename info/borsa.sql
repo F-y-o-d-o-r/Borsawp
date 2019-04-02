@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 02, 2019 at 12:56 PM
+-- Generation Time: Apr 02, 2019 at 02:30 PM
 -- Server version: 8.0.15
 -- PHP Version: 7.3.2
 
@@ -218,7 +218,7 @@ INSERT INTO `borsawp_options` (`option_id`, `option_name`, `option_value`, `auto
 (109, 'widget_tag_cloud', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (110, 'widget_nav_menu', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (111, 'widget_custom_html', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
-(112, 'cron', 'a:5:{i:1554201796;a:1:{s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1554208996;a:3:{s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1554209003;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1554209004;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}s:7:\"version\";i:2;}', 'yes'),
+(112, 'cron', 'a:5:{i:1554205396;a:1:{s:34:\"wp_privacy_delete_old_export_files\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:6:\"hourly\";s:4:\"args\";a:0:{}s:8:\"interval\";i:3600;}}}i:1554208996;a:3:{s:16:\"wp_version_check\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:17:\"wp_update_plugins\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}s:16:\"wp_update_themes\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:10:\"twicedaily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:43200;}}}i:1554209003;a:2:{s:19:\"wp_scheduled_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}s:25:\"delete_expired_transients\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}i:1554209004;a:1:{s:30:\"wp_scheduled_auto_draft_delete\";a:1:{s:32:\"40cd750bba9870f18aada2478b24840a\";a:3:{s:8:\"schedule\";s:5:\"daily\";s:4:\"args\";a:0:{}s:8:\"interval\";i:86400;}}}s:7:\"version\";i:2;}', 'yes'),
 (113, 'theme_mods_twentynineteen', 'a:2:{s:18:\"custom_css_post_id\";i:-1;s:16:\"sidebars_widgets\";a:2:{s:4:\"time\";i:1553778552;s:4:\"data\";a:2:{s:19:\"wp_inactive_widgets\";a:0:{}s:9:\"sidebar-1\";a:6:{i:0;s:8:\"search-2\";i:1;s:14:\"recent-posts-2\";i:2;s:17:\"recent-comments-2\";i:3;s:10:\"archives-2\";i:4;s:12:\"categories-2\";i:5;s:6:\"meta-2\";}}}}', 'yes'),
 (124, '_site_transient_timeout_browser_eb9c1268a950e6eddb2708071f6b0d52', '1554381804', 'no'),
 (125, '_site_transient_browser_eb9c1268a950e6eddb2708071f6b0d52', 'a:10:{s:4:\"name\";s:6:\"Chrome\";s:7:\"version\";s:12:\"73.0.3683.86\";s:8:\"platform\";s:7:\"Windows\";s:10:\"update_url\";s:29:\"https://www.google.com/chrome\";s:7:\"img_src\";s:43:\"http://s.w.org/images/browsers/chrome.png?1\";s:11:\"img_src_ssl\";s:44:\"https://s.w.org/images/browsers/chrome.png?1\";s:15:\"current_version\";s:2:\"18\";s:7:\"upgrade\";b:0;s:8:\"insecure\";b:0;s:6:\"mobile\";b:0;}', 'no'),
@@ -805,7 +805,54 @@ INSERT INTO `borsawp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) 
 (1300, 137, '_menu_item_target', ''),
 (1301, 137, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
 (1302, 137, '_menu_item_xfn', ''),
-(1303, 137, '_menu_item_url', '');
+(1303, 137, '_menu_item_url', ''),
+(1305, 138, '_edit_lock', '1554204590:1'),
+(1306, 138, '_edit_last', '1'),
+(1307, 138, '_wp_page_template', 'page-job.php'),
+(1316, 140, '_menu_item_type', 'post_type'),
+(1317, 140, '_menu_item_menu_item_parent', '0'),
+(1318, 140, '_menu_item_object_id', '138'),
+(1319, 140, '_menu_item_object', 'page'),
+(1320, 140, '_menu_item_target', ''),
+(1321, 140, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
+(1322, 140, '_menu_item_xfn', ''),
+(1323, 140, '_menu_item_url', ''),
+(1325, 141, '_wp_attached_file', '2019/04/hh.jpg'),
+(1326, 141, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:60;s:6:\"height\";i:60;s:4:\"file\";s:14:\"2019/04/hh.jpg\";s:5:\"sizes\";a:0:{}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(1399, 139, '_jobs|prod_main_slider|0|0|value', '141'),
+(1402, 139, '_jobs|prod_main_slider|1|0|value', '141'),
+(1591, 138, '_production_photo', '32'),
+(1592, 138, '_production_slider_text', 'текст из админки'),
+(1593, 138, '_production_hidden_gallery|||0|value', '32'),
+(1594, 138, '_production_hidden_gallery|||1|value', '31'),
+(1611, 138, '_jobs|||0|value', '_'),
+(1612, 138, '_jobs|||1|value', '_'),
+(1613, 138, '_jobs|||2|value', '_'),
+(1614, 138, '_jobs|job_name|0|0|value', 'Уборщица'),
+(1615, 138, '_jobs|job_link|0|0|value', 'https://hh.ua/'),
+(1616, 138, '_jobs|job_img|0|0|value', '141'),
+(1617, 138, '_jobs|job_name|1|0|value', 'Менеджер'),
+(1618, 138, '_jobs|job_link|1|0|value', 'https://hh.ua/'),
+(1619, 138, '_jobs|job_img|1|0|value', '141'),
+(1620, 138, '_jobs|job_name|2|0|value', 'Директор директора'),
+(1621, 138, '_jobs|job_link|2|0|value', 'https://hh.ua/'),
+(1622, 138, '_jobs|job_img|2|0|value', '141'),
+(1623, 139, '_production_photo', '32'),
+(1624, 139, '_production_slider_text', 'текст из админки'),
+(1625, 139, '_production_hidden_gallery|||0|value', '32'),
+(1626, 139, '_production_hidden_gallery|||1|value', '31'),
+(1627, 139, '_jobs|||0|value', '_'),
+(1628, 139, '_jobs|||1|value', '_'),
+(1629, 139, '_jobs|||2|value', '_'),
+(1630, 139, '_jobs|job_name|0|0|value', 'Уборщица'),
+(1631, 139, '_jobs|job_link|0|0|value', 'https://hh.ua/'),
+(1632, 139, '_jobs|job_img|0|0|value', '141'),
+(1633, 139, '_jobs|job_name|1|0|value', 'Менеджер'),
+(1634, 139, '_jobs|job_link|1|0|value', 'https://hh.ua/'),
+(1635, 139, '_jobs|job_img|1|0|value', '141'),
+(1636, 139, '_jobs|job_name|2|0|value', 'Директор директора'),
+(1637, 139, '_jobs|job_link|2|0|value', 'https://hh.ua/'),
+(1638, 139, '_jobs|job_img|2|0|value', '141');
 
 -- --------------------------------------------------------
 
@@ -958,18 +1005,22 @@ INSERT INTO `borsawp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, 
 (123, 1, '2019-04-02 11:51:55', '2019-04-02 08:51:55', '', 'test', '', 'trash', 'open', 'open', '', 'test-2__trashed', '', '', '2019-04-02 11:52:11', '2019-04-02 08:52:11', '', 0, 'http://borsawp/?p=123', 0, 'post', '', 0),
 (124, 1, '2019-04-02 11:51:55', '2019-04-02 08:51:55', '', 'test', '', 'inherit', 'closed', 'closed', '', '123-revision-v1', '', '', '2019-04-02 11:51:55', '2019-04-02 08:51:55', '', 123, 'http://borsawp/%d0%b1%d0%b5%d0%b7-%d1%80%d1%83%d0%b1%d1%80%d0%b8%d0%ba%d0%b8/123-revision-v1/', 0, 'revision', '', 0),
 (125, 1, '2019-04-02 12:10:12', '2019-04-02 09:10:12', '', 'Book1', '', 'inherit', 'open', 'closed', '', 'book1', '', '', '2019-04-02 12:10:12', '2019-04-02 09:10:12', '', 0, 'http://borsawp/wp-content/uploads/2019/04/Book1.xlsx', 0, 'attachment', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 0),
-(126, 1, '2019-04-02 12:28:46', '2019-04-02 09:28:46', ' ', '', '', 'publish', 'closed', 'closed', '', '126', '', '', '2019-04-02 12:53:22', '2019-04-02 09:53:22', '', 0, 'http://borsawp/?p=126', 1, 'nav_menu_item', '', 0),
-(127, 1, '2019-04-02 12:31:41', '2019-04-02 09:31:41', ' ', '', '', 'publish', 'closed', 'closed', '', '127', '', '', '2019-04-02 12:53:22', '2019-04-02 09:53:22', '', 0, 'http://borsawp/?p=127', 2, 'nav_menu_item', '', 0),
-(128, 1, '2019-04-02 12:31:41', '2019-04-02 09:31:41', ' ', '', '', 'publish', 'closed', 'closed', '', '128', '', '', '2019-04-02 12:53:22', '2019-04-02 09:53:22', '', 0, 'http://borsawp/?p=128', 3, 'nav_menu_item', '', 0),
-(129, 1, '2019-04-02 12:31:41', '2019-04-02 09:31:41', '', 'Контакты', '', 'publish', 'closed', 'closed', '', '%d0%ba%d0%be%d0%bd%d1%82%d0%b0%d0%ba%d1%82%d1%8b', '', '', '2019-04-02 12:53:22', '2019-04-02 09:53:22', '', 0, 'http://borsawp/?p=129', 6, 'nav_menu_item', '', 0),
-(130, 1, '2019-04-02 12:32:23', '2019-04-02 09:32:23', '', 'Скачать прайс-лист', '', 'publish', 'closed', 'closed', '', '%d1%81%d0%ba%d0%b0%d1%87%d0%b0%d1%82%d1%8c-%d0%bf%d1%80%d0%b0%d0%b9%d1%81-%d0%bb%d0%b8%d1%81%d1%82', '', '', '2019-04-02 12:53:22', '2019-04-02 09:53:22', '', 0, 'http://borsawp/?p=130', 7, 'nav_menu_item', '', 0),
+(126, 1, '2019-04-02 12:28:46', '2019-04-02 09:28:46', ' ', '', '', 'publish', 'closed', 'closed', '', '126', '', '', '2019-04-02 14:16:52', '2019-04-02 11:16:52', '', 0, 'http://borsawp/?p=126', 1, 'nav_menu_item', '', 0),
+(127, 1, '2019-04-02 12:31:41', '2019-04-02 09:31:41', ' ', '', '', 'publish', 'closed', 'closed', '', '127', '', '', '2019-04-02 14:16:52', '2019-04-02 11:16:52', '', 0, 'http://borsawp/?p=127', 2, 'nav_menu_item', '', 0),
+(128, 1, '2019-04-02 12:31:41', '2019-04-02 09:31:41', ' ', '', '', 'publish', 'closed', 'closed', '', '128', '', '', '2019-04-02 14:16:52', '2019-04-02 11:16:52', '', 0, 'http://borsawp/?p=128', 3, 'nav_menu_item', '', 0),
+(129, 1, '2019-04-02 12:31:41', '2019-04-02 09:31:41', '', 'Контакты', '', 'publish', 'closed', 'closed', '', '%d0%ba%d0%be%d0%bd%d1%82%d0%b0%d0%ba%d1%82%d1%8b', '', '', '2019-04-02 14:16:52', '2019-04-02 11:16:52', '', 0, 'http://borsawp/?p=129', 7, 'nav_menu_item', '', 0),
+(130, 1, '2019-04-02 12:32:23', '2019-04-02 09:32:23', '', 'Скачать прайс-лист', '', 'publish', 'closed', 'closed', '', '%d1%81%d0%ba%d0%b0%d1%87%d0%b0%d1%82%d1%8c-%d0%bf%d1%80%d0%b0%d0%b9%d1%81-%d0%bb%d0%b8%d1%81%d1%82', '', '', '2019-04-02 14:16:52', '2019-04-02 11:16:52', '', 0, 'http://borsawp/?p=130', 8, 'nav_menu_item', '', 0),
 (131, 1, '2019-04-02 12:36:20', '2019-04-02 09:36:20', '', 'Доставка продукции', '', 'publish', 'closed', 'closed', '', 'delivery', '', '', '2019-04-02 12:37:59', '2019-04-02 09:37:59', '', 0, 'http://borsawp/?page_id=131', 0, 'page', '', 0),
 (132, 1, '2019-04-02 12:36:20', '2019-04-02 09:36:20', '', 'Доставка', '', 'inherit', 'closed', 'closed', '', '131-revision-v1', '', '', '2019-04-02 12:36:20', '2019-04-02 09:36:20', '', 131, 'http://borsawp/%d0%b1%d0%b5%d0%b7-%d1%80%d1%83%d0%b1%d1%80%d0%b8%d0%ba%d0%b8/131-revision-v1/', 0, 'revision', '', 0),
 (133, 1, '2019-04-02 12:37:59', '2019-04-02 09:37:59', '', 'Доставка продукции', '', 'inherit', 'closed', 'closed', '', '131-revision-v1', '', '', '2019-04-02 12:37:59', '2019-04-02 09:37:59', '', 131, 'http://borsawp/%d0%b1%d0%b5%d0%b7-%d1%80%d1%83%d0%b1%d1%80%d0%b8%d0%ba%d0%b8/131-revision-v1/', 0, 'revision', '', 0),
-(134, 1, '2019-04-02 12:38:34', '2019-04-02 09:38:34', '', 'Доставка', '', 'publish', 'closed', 'closed', '', '134', '', '', '2019-04-02 12:53:22', '2019-04-02 09:53:22', '', 0, 'http://borsawp/?p=134', 4, 'nav_menu_item', '', 0),
+(134, 1, '2019-04-02 12:38:34', '2019-04-02 09:38:34', '', 'Доставка', '', 'publish', 'closed', 'closed', '', '134', '', '', '2019-04-02 14:16:52', '2019-04-02 11:16:52', '', 0, 'http://borsawp/?p=134', 4, 'nav_menu_item', '', 0),
 (135, 1, '2019-04-02 12:40:01', '2019-04-02 09:40:01', '', 'Контроль качества', '', 'publish', 'closed', 'closed', '', 'control', '', '', '2019-04-02 12:49:30', '2019-04-02 09:49:30', '', 0, 'http://borsawp/?page_id=135', 0, 'page', '', 0),
 (136, 1, '2019-04-02 12:40:01', '2019-04-02 09:40:01', '', 'Контроль качества', '', 'inherit', 'closed', 'closed', '', '135-revision-v1', '', '', '2019-04-02 12:40:01', '2019-04-02 09:40:01', '', 135, 'http://borsawp/%d0%b1%d0%b5%d0%b7-%d1%80%d1%83%d0%b1%d1%80%d0%b8%d0%ba%d0%b8/135-revision-v1/', 0, 'revision', '', 0),
-(137, 1, '2019-04-02 12:53:22', '2019-04-02 09:53:22', ' ', '', '', 'publish', 'closed', 'closed', '', '137', '', '', '2019-04-02 12:53:22', '2019-04-02 09:53:22', '', 0, 'http://borsawp/?p=137', 5, 'nav_menu_item', '', 0);
+(137, 1, '2019-04-02 12:53:22', '2019-04-02 09:53:22', ' ', '', '', 'publish', 'closed', 'closed', '', '137', '', '', '2019-04-02 14:16:52', '2019-04-02 11:16:52', '', 0, 'http://borsawp/?p=137', 5, 'nav_menu_item', '', 0),
+(138, 1, '2019-04-02 12:58:53', '2019-04-02 09:58:53', '', 'Работа в компании', '', 'publish', 'closed', 'closed', '', 'job', '', '', '2019-04-02 14:29:50', '2019-04-02 11:29:50', '', 0, 'http://borsawp/?page_id=138', 0, 'page', '', 0),
+(139, 1, '2019-04-02 12:58:53', '2019-04-02 09:58:53', '', 'Работа в компании', '', 'inherit', 'closed', 'closed', '', '138-revision-v1', '', '', '2019-04-02 12:58:53', '2019-04-02 09:58:53', '', 138, 'http://borsawp/%d0%b1%d0%b5%d0%b7-%d1%80%d1%83%d0%b1%d1%80%d0%b8%d0%ba%d0%b8/138-revision-v1/', 0, 'revision', '', 0),
+(140, 1, '2019-04-02 14:16:52', '2019-04-02 11:16:52', '', 'Карьера', '', 'publish', 'closed', 'closed', '', '%d0%ba%d0%b0%d1%80%d1%8c%d0%b5%d1%80%d0%b0', '', '', '2019-04-02 14:16:52', '2019-04-02 11:16:52', '', 0, 'http://borsawp/?p=140', 6, 'nav_menu_item', '', 0),
+(141, 1, '2019-04-02 14:22:53', '2019-04-02 11:22:53', '', 'hh', '', 'inherit', 'open', 'closed', '', 'hh', '', '', '2019-04-02 14:22:53', '2019-04-02 11:22:53', '', 138, 'http://borsawp/wp-content/uploads/2019/04/hh.jpg', 0, 'attachment', 'image/jpeg', 0);
 
 -- --------------------------------------------------------
 
@@ -1082,7 +1133,8 @@ INSERT INTO `borsawp_term_relationships` (`object_id`, `term_taxonomy_id`, `term
 (129, 13, 0),
 (130, 13, 0),
 (134, 13, 0),
-(137, 13, 0);
+(137, 13, 0),
+(140, 13, 0);
 
 -- --------------------------------------------------------
 
@@ -1116,7 +1168,7 @@ INSERT INTO `borsawp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, 
 (10, 10, 'category', '', 0, 1),
 (11, 11, 'category', '', 0, 1),
 (12, 12, 'category', '', 0, 0),
-(13, 13, 'nav_menu', '', 0, 7);
+(13, 13, 'nav_menu', '', 0, 8);
 
 -- --------------------------------------------------------
 
@@ -1321,19 +1373,19 @@ ALTER TABLE `borsawp_links`
 -- AUTO_INCREMENT for table `borsawp_options`
 --
 ALTER TABLE `borsawp_options`
-  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=360;
+  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=361;
 
 --
 -- AUTO_INCREMENT for table `borsawp_postmeta`
 --
 ALTER TABLE `borsawp_postmeta`
-  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1305;
+  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1639;
 
 --
 -- AUTO_INCREMENT for table `borsawp_posts`
 --
 ALTER TABLE `borsawp_posts`
-  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=138;
+  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=142;
 
 --
 -- AUTO_INCREMENT for table `borsawp_termmeta`

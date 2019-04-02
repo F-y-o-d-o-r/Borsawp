@@ -192,14 +192,28 @@ use Carbon_Fields\Field;
 // настройки темы
 add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' );
 function crb_attach_theme_options() {
-  // производство production page, control page
+  // popup slider - производство production page, control page, job page
     Container::make( 'post_meta', 'Slider' )
     ->where( 'post_id', '=', '25' )
     ->or_where( 'post_id', '=', '135' )
+    ->or_where( 'post_id', '=', '138' )
     ->add_fields( array(
       Field::make("image", "production_photo", "Фото для вызова слайдера"),
       Field::make('text', 'production_slider_text', 'Текст под слайдером'),
       Field::make( 'media_gallery', 'production_hidden_gallery', __( 'Слайдер скрытый' ) )
+    ));
+    // job
+    Container::make( 'post_meta', 'Вакансии' )
+    ->or_where( 'post_id', '=', '138' )
+    ->add_fields( array(
+      Field::make( 'complex', 'jobs', 'Работа' )
+              ->add_fields( array(
+                Field::make( 'text', 'job_name', 'Название' ),
+                Field::make( 'text', 'job_link', 'Ссылка' ),
+                Field::make("image", "job_img", "Картинка"),
+              )
+              )
+              ->help_text( 'Перечислите вакансии' ),
     ));
     // product
     Container::make( 'post_meta', 'Table' )
