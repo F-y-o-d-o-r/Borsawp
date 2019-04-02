@@ -57,26 +57,27 @@
             <li><a href="#" title="menu">Контакты</a></li>
           </ul> -->
           <?php
-wp_nav_menu([
-    'theme_location' => '',
-    'menu' => '',
-    'container' => 'div',
-    'container_class' => '',
-    'container_id' => '',
-    'menu_class' => 'flex',
-    'menu_id' => '',
-    'echo' => true,
-    'fallback_cb' => 'wp_page_menu',
-    'before' => '',
-    'after' => '',
-    'link_before' => '',
-    'link_after' => '',
-    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-    'depth' => 0,
-    'walker' => '',
-]);
-?>
-        </nav><a class="tel header-tel" href="tel:<?php echo carbon_get_theme_option('phone_one'); ?>" title="phone number"><?php echo carbon_get_theme_option('phone_one'); ?></a><button class="btn-main" id="leftOrder">Оставить заявку</button>
+            wp_nav_menu([
+                'theme_location' => '',
+                'menu' => 'Header-menu',
+                'container' => 'div',
+                'container_class' => '',
+                'container_id' => '',
+                'menu_class' => 'flex',
+                'menu_id' => '',
+                'echo' => true,
+                'fallback_cb' => 'wp_page_menu',
+                'before' => '',
+                'after' => '',
+                'link_before' => '',
+                'link_after' => '',
+                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                'depth' => 0,
+                'walker' => '',
+            ]);
+          ?>
+        </nav>
+        <a class="tel header-tel" href="tel:<?php echo carbon_get_theme_option('phone_one'); ?>" title="phone number"><?php echo carbon_get_theme_option('phone_one'); ?></a><button class="btn-main" id="leftOrder">Оставить заявку</button>
       </div>
 
     </header>

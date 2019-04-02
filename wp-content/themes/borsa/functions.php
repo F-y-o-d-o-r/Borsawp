@@ -192,9 +192,10 @@ use Carbon_Fields\Field;
 // настройки темы
 add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' );
 function crb_attach_theme_options() {
-  // производство page
+  // производство production page, control page
     Container::make( 'post_meta', 'Slider' )
     ->where( 'post_id', '=', '25' )
+    ->or_where( 'post_id', '=', '135' )
     ->add_fields( array(
       Field::make("image", "production_photo", "Фото для вызова слайдера"),
       Field::make('text', 'production_slider_text', 'Текст под слайдером'),

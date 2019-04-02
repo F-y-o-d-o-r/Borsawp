@@ -19,7 +19,7 @@
       <div class="container">
         <div class="row menu">
           <nav>
-            <ul class="flex">
+            <!-- <ul class="flex">
               <li><a href="#" title="menu">О компании</a></li>
               <li><a href="#" title="menu">Продукция</a></li>
               <li><a href="#" title="menu">Производство</a></li>
@@ -37,7 +37,27 @@
                 }
               ?>
               <li><a href="#" title="menu">Карта сайта</a></li>
-            </ul>
+            </ul> -->
+            <?php
+            wp_nav_menu([
+                'theme_location' => '',
+                'menu' => 'footer',
+                'container' => 'div',
+                'container_class' => '',
+                'container_id' => '',
+                'menu_class' => 'flex',
+                'menu_id' => '',
+                'echo' => true,
+                'fallback_cb' => 'wp_page_menu',
+                'before' => '',
+                'after' => '',
+                'link_before' => '',
+                'link_after' => '',
+                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                'depth' => 0,
+                'walker' => '',
+            ]);
+          ?>
           </nav>
         </div>
         <div class="row flex">
