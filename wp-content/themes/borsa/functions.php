@@ -321,7 +321,7 @@ function news_init(){
     'query_var'          => true,
     'rewrite'            => true,
     'capability_type'    => 'post',
-    'has_archive'        => false,
+    'has_archive'        => true,
     'hierarchical'       => false,
     'menu_position'      => null,
     'supports'           => array('title','editor','author','thumbnail','excerpt','comments')
