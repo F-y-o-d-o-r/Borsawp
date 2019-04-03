@@ -202,6 +202,14 @@ function crb_attach_theme_options() {
       Field::make('text', 'production_slider_text', 'Текст под слайдером'),
       Field::make( 'media_gallery', 'production_hidden_gallery', __( 'Слайдер скрытый' ) )
     ));
+    // news
+    Container::make( 'post_meta', 'News' )
+    ->show_on_post_type('news')
+    ->add_fields( array(
+      Field::make("image", "news_photo", "Фото для вызова слайдера"),
+      Field::make('text', 'news_slider_text', 'Текст под слайдером'),
+      Field::make( 'media_gallery', 'news_hidden_gallery', __( 'Слайдер скрытый' ) )
+    ));
     // job
     Container::make( 'post_meta', 'Вакансии' )
     ->or_where( 'post_id', '=', '138' )
@@ -257,7 +265,6 @@ function crb_attach_theme_options1() {
     ) );
 }
 // END CarbonFields
-
 // START Post types
 add_action('init', 'slider_init');
 function slider_init(){
