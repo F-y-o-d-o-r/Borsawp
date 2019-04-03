@@ -212,7 +212,7 @@ function crb_attach_theme_options() {
     ));
     // job
     Container::make( 'post_meta', 'Вакансии' )
-    ->or_where( 'post_id', '=', '138' )
+    ->where( 'post_id', '=', '138' )
     ->add_fields( array(
       Field::make( 'complex', 'jobs', 'Работа' )
               ->add_fields( array(
