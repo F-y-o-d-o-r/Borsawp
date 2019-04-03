@@ -11,7 +11,10 @@
               <p>Наши менеджеры помогут вам разобраться</p>
             </div>
           </div>
-          <form><input type="text" name="phone" placeholder="Телефон"><button class="btn">Перезвоните мне</button></form>
+          <?php
+            echo do_shortcode('[contact-form-7 id="195" title="call"]');
+          ?>
+          <!-- <form><input type="text" name="phone" placeholder="Телефон"><button class="btn">Перезвоните мне</button></form> -->
         </div>
       </div>
     </section>
@@ -83,5 +86,6 @@
       </div>
     </section>
     <script type="text/javascript" src="<?PHP bloginfo('template_url');?>/js/app.js"></script>
+    <script type="text/javascript" src="<?PHP bloginfo('template_url');?>/js/wp.js"></script>
   </body>
 </html>
