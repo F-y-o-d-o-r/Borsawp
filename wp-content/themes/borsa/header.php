@@ -98,7 +98,7 @@
               <li><a href="#" title="menu">Новости</a></li>
               <li><a href="#" title="menu">Карьера</a></li>
               <li><a href="#" title="menu">Контакты</a></li>
-              <li><a class="price-list" href="#" title="menu">Прайс-лист</a></li>
+              <li class="price-list"><a href="#" title="menu">Прайс-лист</a></li>
               <li><a href="#" title="menu">Карта сайта</a></li>
             </ul>
           </nav>

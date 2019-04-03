@@ -321,3 +321,12 @@ function news_init(){
   ) );
 }
 // END Post types
+// START добавляем класс к пункту меню
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+function special_nav_class($classes, $item){
+    if($item->title == 'Скачать прайс-лист'){
+      $classes[] = 'price-list';
+    }
+    return $classes;
+}
+// END добавляем класс к пункту меню
