@@ -23,14 +23,14 @@
   <meta name="theme-color" content="#3ECC29">
   <meta name="msapplication-navbutton-color" content="#3ECC29">
   <meta name="apple-mobile-web-app-status-bar-style" content="#3ECC29">
-  <link rel="apple-touch-icon" sizes="180x180" href="<?PHP bloginfo('template_url');?> /img/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="<?PHP bloginfo('template_url');?> /img/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="<?PHP bloginfo('template_url');?> /img/favicon/favicon-16x16.png">
-  <link rel="manifest" href="<?PHP bloginfo('template_url');?> /img/favicon/site.webmanifest">
-  <link rel="mask-icon" href="<?PHP bloginfo('template_url');?> /img/favicon/safari-pinned-tab.svg" color="#5bbad5">
-  <link rel="shortcut icon" href="<?PHP bloginfo('template_url');?> /img/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="<?PHP bloginfo('template_url');?>/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="<?PHP bloginfo('template_url');?>/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="<?PHP bloginfo('template_url');?>/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="<?PHP bloginfo('template_url');?>/img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="<?PHP bloginfo('template_url');?>/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="<?PHP bloginfo('template_url');?>/img/favicon/favicon.ico">
   <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="msapplication-config" content="<?PHP bloginfo('template_url');?> /img/favicon/browserconfig.xml">
+  <meta name="msapplication-config" content="<?PHP bloginfo('template_url');?>/img/favicon/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
@@ -45,7 +45,7 @@
         <div class="nav-icon-wrapper dnone">
           <div id="nav-icon"><span></span><span></span><span></span></div>
           <div class="menu-name">Меню</div>
-        </div><a class="logo-wrapper flex" href="/" title="main page"><img src="<?PHP bloginfo('template_url');?> /img/header-logo.png" alt="header logo">
+        </div><a class="logo-wrapper flex" href="/" title="main page"><img src="<?PHP bloginfo('template_url');?>/img/header-logo.png" alt="header logo">
           <p>Производство мягких контейнеров / биг бэг</p>
         </a>
         <nav>
