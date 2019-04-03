@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 03, 2019 at 10:58 AM
+-- Generation Time: Apr 03, 2019 at 11:16 AM
 -- Server version: 8.0.15
 -- PHP Version: 7.3.2
 
@@ -1130,7 +1130,10 @@ INSERT INTO `borsawp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) 
 (1982, 182, '_menu_item_target', ''),
 (1983, 182, '_menu_item_classes', 'a:1:{i:0;s:0:\"\";}'),
 (1984, 182, '_menu_item_xfn', ''),
-(1985, 182, '_menu_item_url', 'http://ya.ru');
+(1985, 182, '_menu_item_url', 'http://ya.ru'),
+(1987, 183, '_edit_lock', '1554279386:1'),
+(1988, 183, '_wp_page_template', 'page-terms.php'),
+(1989, 183, '_edit_last', '1');
 
 -- --------------------------------------------------------
 
@@ -1337,7 +1340,9 @@ INSERT INTO `borsawp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, 
 (179, 1, '2019-04-03 10:14:01', '2019-04-03 07:14:01', '', 'Доставка', '', 'publish', 'closed', 'closed', '', '%d0%b4%d0%be%d1%81%d1%82%d0%b0%d0%b2%d0%ba%d0%b0-2', '', '', '2019-04-03 10:16:09', '2019-04-03 07:16:09', '', 0, 'http://borsawp/?p=179', 1, 'nav_menu_item', '', 0),
 (180, 1, '2019-04-03 10:16:09', '2019-04-03 07:16:09', '', 'Карьера', '', 'publish', 'closed', 'closed', '', '%d0%ba%d0%b0%d1%80%d1%8c%d0%b5%d1%80%d0%b0-2', '', '', '2019-04-03 10:16:09', '2019-04-03 07:16:09', '', 0, 'http://borsawp/?p=180', 3, 'nav_menu_item', '', 0),
 (181, 1, '2019-04-03 10:16:09', '2019-04-03 07:16:09', '', 'Прайс-лист', '', 'publish', 'closed', 'closed', '', '%d0%bf%d1%80%d0%b0%d0%b9%d1%81-%d0%bb%d0%b8%d1%81%d1%82', '', '', '2019-04-03 10:16:09', '2019-04-03 07:16:09', '', 0, 'http://borsawp/?p=181', 4, 'nav_menu_item', '', 0),
-(182, 1, '2019-04-03 10:16:09', '2019-04-03 07:16:09', '', 'карта сайта', '', 'publish', 'closed', 'closed', '', '%d0%ba%d0%b0%d1%80%d1%82%d0%b0-%d1%81%d0%b0%d0%b9%d1%82%d0%b0-2', '', '', '2019-04-03 10:16:09', '2019-04-03 07:16:09', '', 0, 'http://borsawp/?p=182', 5, 'nav_menu_item', '', 0);
+(182, 1, '2019-04-03 10:16:09', '2019-04-03 07:16:09', '', 'карта сайта', '', 'publish', 'closed', 'closed', '', '%d0%ba%d0%b0%d1%80%d1%82%d0%b0-%d1%81%d0%b0%d0%b9%d1%82%d0%b0-2', '', '', '2019-04-03 10:16:09', '2019-04-03 07:16:09', '', 0, 'http://borsawp/?p=182', 5, 'nav_menu_item', '', 0),
+(183, 1, '2019-04-03 11:01:30', '2019-04-03 08:01:30', '', 'Пользовательское соглашение', '', 'publish', 'closed', 'closed', '', 'terms', '', '', '2019-04-03 11:01:37', '2019-04-03 08:01:37', '', 0, 'http://borsawp/?page_id=183', 0, 'page', '', 0),
+(184, 1, '2019-04-03 11:01:30', '2019-04-03 08:01:30', '', 'Пользовательское соглашение', '', 'inherit', 'closed', 'closed', '', '183-revision-v1', '', '', '2019-04-03 11:01:30', '2019-04-03 08:01:30', '', 183, 'http://borsawp/%d0%b1%d0%b5%d0%b7-%d1%80%d1%83%d0%b1%d1%80%d0%b8%d0%ba%d0%b8/183-revision-v1/', 0, 'revision', '', 0);
 
 -- --------------------------------------------------------
 
@@ -1725,13 +1730,13 @@ ALTER TABLE `borsawp_options`
 -- AUTO_INCREMENT for table `borsawp_postmeta`
 --
 ALTER TABLE `borsawp_postmeta`
-  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1987;
+  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1990;
 
 --
 -- AUTO_INCREMENT for table `borsawp_posts`
 --
 ALTER TABLE `borsawp_posts`
-  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=183;
+  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=185;
 
 --
 -- AUTO_INCREMENT for table `borsawp_termmeta`
