@@ -86,21 +86,61 @@
       <div class="burger-content">
         <div class="nav-wrapper">
           <nav>
-            <ul class="flex left-part">
-              <li><a class="true" href="#" title="menu">О компании</a></li>
+          <?php
+            wp_nav_menu([
+                'theme_location' => '',
+                'menu' => 'mobile-left',
+                'container' => '',
+                'container_class' => '',
+                'container_id' => '',
+                'menu_class' => 'flex left-part',
+                'menu_id' => '',
+                'echo' => true,
+                'fallback_cb' => 'wp_page_menu',
+                'before' => '',
+                'after' => '',
+                'link_before' => '',
+                'link_after' => '',
+                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                'depth' => 0,
+                'walker' => '',
+            ]);
+          ?>
+            <!-- <ul class="flex left-part"> -->
+              <!-- <li><a class="true" href="#" title="menu">О компании</a></li>
               <li><a class="true" href="#" title="menu">Продукция</a></li>
               <li><a class="true" href="#" title="menu">Производство</a></li>
               <li><a class="true" href="#" title="menu">Доставка</a></li>
-              <li><a class="true" href="#" title="menu">Контроль качества</a></li>
-            </ul>
+              <li><a class="true" href="#" title="menu">Контроль качества</a></li> -->
+            <!-- </ul> -->
             <div class="line"></div>
-            <ul class="flex right-part">
-              <li><a href="#" title="menu">Новости</a></li>
+            <?php
+            wp_nav_menu([
+                'theme_location' => '',
+                'menu' => 'mobile-right',
+                'container' => '',
+                'container_class' => '',
+                'container_id' => '',
+                'menu_class' => 'flex right-part',
+                'menu_id' => '',
+                'echo' => true,
+                'fallback_cb' => 'wp_page_menu',
+                'before' => '',
+                'after' => '',
+                'link_before' => '',
+                'link_after' => '',
+                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                'depth' => 0,
+                'walker' => '',
+            ]);
+          ?>
+            <!-- <ul class="flex right-part"> -->
+              <!-- <li><a href="#" title="menu">Новости</a></li>
               <li><a href="#" title="menu">Карьера</a></li>
               <li><a href="#" title="menu">Контакты</a></li>
               <li class="price-list"><a href="#" title="menu">Прайс-лист</a></li>
-              <li><a href="#" title="menu">Карта сайта</a></li>
-            </ul>
+              <li><a href="#" title="menu">Карта сайта</a></li> -->
+            <!-- </ul> -->
           </nav>
         </div><button class="btn-left-order-mobile" id="leftOrderMobile">Оставить заявку</button><a class="tel" href="tel:<?php echo carbon_get_theme_option('phone_one'); ?>" title="phone number"><?php echo carbon_get_theme_option('phone_one'); ?></a>
         <div class="social-wrapper"><a href="<?php echo carbon_get_theme_option('link_fb'); ?>" title="facebook"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -128,37 +128,44 @@ get_header();
       <section class="news-wrapper">
         <div class="container">
           <div class="section-header-wrapper">
-            <h3>Новости и события</h3><a class="btn-more" href="#" title="more">Все новости<svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <h3>Новости и события</h3><a class="btn-more" href="/news" title="more">Все новости<svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0.656432 19.1095L1.84379 20L9.34375 10L1.84379 -6.55667e-07L0.656434 0.890519L7.4885 10L0.656432 19.1095Z" fill="#3ECC29" /></svg></a>
           </div>
-          <div class="news"><a class="news__item clearfix" href="#" title="title">
-              <div class="news__content">
-                <div class="header">
-                  <div class="header__left">10<span>февраля 2019</span></div>
-                  <div class="header__right"></div>
+          <div class="news">
+          <?php
+            $posts = get_posts( array(
+              'numberposts' => 3,
+              'orderby'     => 'date',
+              'order'       => 'DESC',
+              'include'     => array(),
+              'exclude'     => array(),
+              'meta_key'    => '',
+              'meta_value'  =>'',
+              'post_type'   => 'news',
+              'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+            ) );
+            // print_r($posts);
+            wp_list_sort( $posts, $orderby, $order, $preserve_keys );
+            foreach( $posts as $post ){
+                // формат вывода the_title() ...
+                ?>
+                <a class="news__item clearfix" href="<?php echo get_post_permalink($post->ID) ?>" title="title">
+                  <div class="news__content">
+                    <div class="header">
+                      <div class="header__left"><?php echo get_the_date('d'); ?><span><?php echo get_the_date('F Y'); ?></span></div>
+                      <?php echo get_the_post_thumbnail_url() ? '<div class="header__right"></div>' : null; ?>
+                    </div>
+                    <div class="body"><?php echo $post->post_title; ?></div>
+                  </div>
+                  <div class="news__bg"></div>
+                </a>
+              <?php
+            }
+            wp_reset_postdata(); // сброс
+          ?>
+            <a class="btn-more mobile" href="#" title="more">Все новости<svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.656432 19.1095L1.84379 20L9.34375 10L1.84379 -6.55667e-07L0.656434 0.890519L7.4885 10L0.656432 19.1095Z" fill="#3ECC29" /></svg></a>
                 </div>
-                <div class="body">Обзор XXIV международной специализированной торгово-промышленной выставки «MVC: Зерно-Комбикорма-Ветеринария-2019»</div>
-              </div>
-              <div class="news__bg"></div>
-            </a><a class="news__item clearfix" href="#" title="title">
-              <div class="news__content">
-                <div class="header">
-                  <div class="header__left">25<span>января 2019</span></div>
-                </div>
-                <div class="body">Обзор XXIV международной специализированной торгово-промышленной выставки «MVC: Зерно-Комбикорма-Ветеринария-2019»</div>
-              </div>
-              <div class="news__bg"></div>
-            </a><a class="news__item clearfix" href="#" title="title">
-              <div class="news__content">
-                <div class="header">
-                  <div class="header__left">7<span>ноября 2018</span></div>
-                  <div class="header__right"></div>
-                </div>
-                <div class="body">Обзор XXIV международной специализированной торгово-промышленной выставки «MVC: Зерно-Комбикорма-Ветеринария-2019»</div>
-              </div>
-              <div class="news__bg"></div>
-            </a><a class="btn-more mobile" href="#" title="more">Все новости<svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.656432 19.1095L1.84379 20L9.34375 10L1.84379 -6.55667e-07L0.656434 0.890519L7.4885 10L0.656432 19.1095Z" fill="#3ECC29" /></svg></a></div>
         </div>
       </section>
       <div class="container">

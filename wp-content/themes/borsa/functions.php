@@ -331,8 +331,11 @@ function news_init(){
 // START добавляем класс к пункту меню
 add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
 function special_nav_class($classes, $item){
-    if($item->title == 'Скачать прайс-лист'){
+    if($item->title == 'Прайс-лист'){
       $classes[] = 'price-list';
+    }
+    if($item->title == 'Продукция'){
+      $classes[] = 'product';
     }
     return $classes;
 }
