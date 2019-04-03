@@ -18,7 +18,7 @@ get_header();
         </div>
         <div class="terms-wrapper gray-bg">
           <div class="container">
-            <div class="subheader">Настоящее Соглашение определяет условия использования Пользователями материалов и сервисов сайта <a href="#" title="www.borsamsk.ru" target="_blank">www.borsamsk.ru</a> (далее — «Сайт»).</div>
+            <div class="subheader">Настоящее Соглашение определяет условия использования Пользователями материалов и сервисов сайта <a href="http://www.borsam.ru/" title="www.borsamsk.ru" target="_blank">www.borsamsk.ru</a> (далее — «Сайт»).</div>
             <div class="content-wrapper">
               <ol>
                 <li>Общие условия<ol>
