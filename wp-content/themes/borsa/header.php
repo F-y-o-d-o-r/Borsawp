@@ -184,12 +184,20 @@
         <h6>Свяжитесь с нами или оставьте заявку</h6>
         <div class="contacts-wrapper"><a href="tel<?php echo carbon_get_theme_option('phone_one'); ?>"><?php echo carbon_get_theme_option('phone_one'); ?></a><a href="mailto:<?php echo carbon_get_theme_option('email'); ?>u"><?php echo carbon_get_theme_option('email'); ?></a></div>
         <div class="form-wrapper">
-          <form>
-            <div class="inputs-wrapper"><input type="text" name="name" placeholder="Ваше имя" required="true"><input type="email" name="name" placeholder="Ваш E-mail" required="true"><input type="number" name="name" placeholder="Ваш телефон" required="true"></div><textarea name="message" placeholder="Сообщение" required="true"></textarea>
+        <?php
+          echo do_shortcode('[contact-form-7 id="196" title="popup form"]');
+        ?>
+          <!-- <form>
+            <div class="inputs-wrapper">
+              <input type="text" name="name" placeholder="Ваше имя" required="true">
+              <input type="email" name="name" placeholder="Ваш E-mail" required="true">
+              <input type="number" name="name" placeholder="Ваш телефон" required="true"><
+            /div>
+            <textarea name="message" placeholder="Сообщение" required="true"></textarea>
             <footer class="form-footer">
               <div class="checkbox-wrapper"><label><input class="checkbox" type="checkbox"><span class="checkbox-custom"></span><span class="label">Я принимаю <a href="/terms" title="title" target="_blank">условия передачи информации</a></span></label></div><button class="btn-more" type="submit">Отправить сообщение</button>
             </footer>
-          </form>
+          </form> -->
         </div>
       </div>
     </div>

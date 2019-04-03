@@ -39,12 +39,15 @@ get_header();
         <div class="form-wrapper">
           <div class="container">
             <h3 class="h3">Отправьте сообщение с вопросом или предложением о сотрудничестве</h3>
-            <form>
+            <?php
+              echo do_shortcode('[contact-form-7 id="197" title="contacts page"]');
+            ?>
+            <!-- <form>
               <div class="inputs-wrapper"><input type="text" name="name" placeholder="Ваше имя" required="true"><input type="email" name="name" placeholder="Ваш E-mail" required="true"><input type="number" name="name" placeholder="Ваш телефон" required="true"></div><textarea name="message" placeholder="Сообщение" required="true"></textarea>
               <footer class="form-footer">
                 <div class="checkbox-wrapper"><label><input class="checkbox" type="checkbox"><span class="checkbox-custom"></span><span class="label">Я принимаю <a href="/terms" title="title" target="_blank">условия передачи информации</a></span></label></div><button class="btn-more" type="submit">Отправить сообщение</button>
               </footer>
-            </form>
+            </form> -->
           </div>
         </div>
       </section>
