@@ -11,8 +11,8 @@ get_header();
         <div class="container">
           <p class="breadcrambs">
             <?php
-              the_breadcrumb();
-            ?>
+the_breadcrumb();
+?>
           </p>
           <h1 class="breadcrambs-h1"><?PHP echo get_the_title() ?></h1>
           <!-- <div class="date-chose-wrapper"><select name="date1">
@@ -33,27 +33,27 @@ get_header();
                 <path d="M15.2381 16L0 0.761906L0.761901 0L16 15.2381L15.2381 16Z" fill="#BCBCBC" /></svg>
               <p>Очистить</p>
             </div>
-          </div><button class="btn-more sort-mobile-btn">Сортировать</button>
-        </div> -->
+          </div><button class="btn-more sort-mobile-btn">Сортировать</button>-->
+        </div>
         <div class="container news-wrpaper">
           <div class="news">
           <?php
-            $posts = get_posts( array(
-              'numberposts' => 0,
-              'orderby'     => 'date',
-              'order'       => 'DESC',
-              'include'     => array(),
-              'exclude'     => array(),
-              'meta_key'    => '',
-              'meta_value'  =>'',
-              'post_type'   => 'news',
-              'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
-            ) );
-            // print_r($posts);
-            wp_list_sort( $posts, $orderby, $order, $preserve_keys );
-            foreach( $posts as $post ){
-                // формат вывода the_title() ...
-                ?>
+$posts = get_posts(array(
+    'numberposts' => 0,
+    'orderby' => 'date',
+    'order' => 'DESC',
+    'include' => array(),
+    'exclude' => array(),
+    'meta_key' => '',
+    'meta_value' => '',
+    'post_type' => 'news',
+    'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+));
+// print_r($posts);
+wp_list_sort($posts, $orderby, $order, $preserve_keys);
+foreach ($posts as $post) {
+    // формат вывода the_title() ...
+    ?>
                 <a class="news__item clearfix" href="<?php echo get_post_permalink($post->ID) ?>" title="title">
                   <div class="news__content">
                     <div class="header">
@@ -65,10 +65,10 @@ get_header();
                   <div class="news__bg"></div>
                 </a>
               <?php
-            }
-            wp_reset_postdata(); // сброс
-          ?>
-            
+}
+wp_reset_postdata(); // сброс
+?>
+
             </div>
             <a class="btn-more more-news" href="#" title="more">Показать больше новостей</a>
         </div>

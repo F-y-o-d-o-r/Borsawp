@@ -12,8 +12,8 @@
             </div>
           </div>
           <?php
-            echo do_shortcode('[contact-form-7 id="195" title="call"]');
-          ?>
+echo do_shortcode('[contact-form-7 id="195" title="call"]');
+?>
           <!-- <form><input type="text" name="phone" placeholder="Телефон"><button class="btn">Перезвоните мне</button></form> -->
         </div>
       </div>
@@ -32,35 +32,35 @@
               <li><a href="#" title="menu">Карьера</a></li>
               <li><a href="#" title="menu">Контакты</a></li>
               <?php
-                $file = carbon_get_theme_option( 'price' );
-                // Проверяем, есть ли значение в произвольном поле
-                if( $file ){
-                  // printf('<a href="%s">Скачать прайс-лист</a>', $file);
-                  printf('<li><a class="price-list" href="%s" title="menu">Прайс-лист</a></li>', $file);
-                }
-              ?>
+$file = carbon_get_theme_option('price');
+// Проверяем, есть ли значение в произвольном поле
+if ($file) {
+    // printf('<a href="%s">Скачать прайс-лист</a>', $file);
+    printf('<li><a class="price-list" href="%s" title="menu">Прайс-лист</a></li>', $file);
+}
+?>
               <li><a href="#" title="menu">Карта сайта</a></li>
             </ul> -->
             <?php
-            wp_nav_menu([
-                'theme_location' => '',
-                'menu' => 'footer',
-                'container' => 'div',
-                'container_class' => '',
-                'container_id' => '',
-                'menu_class' => 'flex',
-                'menu_id' => '',
-                'echo' => true,
-                'fallback_cb' => 'wp_page_menu',
-                'before' => '',
-                'after' => '',
-                'link_before' => '',
-                'link_after' => '',
-                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                'depth' => 0,
-                'walker' => '',
-            ]);
-          ?>
+wp_nav_menu([
+    'theme_location' => '',
+    'menu' => 'footer',
+    'container' => 'div',
+    'container_class' => '',
+    'container_id' => '',
+    'menu_class' => 'flex',
+    'menu_id' => '',
+    'echo' => true,
+    'fallback_cb' => 'wp_page_menu',
+    'before' => '',
+    'after' => '',
+    'link_before' => '',
+    'link_after' => '',
+    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+    'depth' => 0,
+    'walker' => '',
+]);
+?>
           </nav>
         </div>
         <div class="row flex">
@@ -85,6 +85,14 @@
         </div>
       </div>
     </section>
+    <section class="popup-wrapper contact-page-popup-wrapper dnone">
+        <div class="container">
+          <div class="content-wrapper clearfix"><img class="close" src="<?PHP bloginfo('template_url');?>/img/closesort.svg" alt="close"><img class="mail" src="<?PHP bloginfo('template_url');?>/img/advantages/mail.svg" alt="mail">
+            <h4>Спасибо большое!</h4>
+            <p>Ваше сообщение успешно отправлено. В скором времени наши менеджеры свяжутся с вами для обсуждения всех дополнительных вопросов. Хорошего вам дня!</p>
+          </div>
+        </div>
+      </section>
     <script type="text/javascript" src="<?PHP bloginfo('template_url');?>/js/app.js"></script>
     <script type="text/javascript" src="<?PHP bloginfo('template_url');?>/js/wp.js"></script>
   </body>

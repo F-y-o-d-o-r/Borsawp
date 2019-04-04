@@ -1,17 +1,14 @@
-var wpcf7Elm = document.querySelector('.wpcf7-form');
-
-wpcf7Elm.addEventListener(
-  'wpcf7invalid',
-  function(event) {
-    console.log(111);
-    alert('Fire!');
-  },
-  false
-);
-document.addEventListener(
-  'wpcf7submit',
-  function(event) {
-    alert('Fire!');
-  },
-  false
-);
+jQuery(document).ready(function($) {
+  setTimeout(sent, 1000);
+  function sent(params) {
+    if ($('.questions .wpcf7-form').hasClass('sent')) {
+      $('.popup-wrapper').removeClass('dnone');
+    }
+    if ($('main .wpcf7-form').hasClass('sent')) {
+      $('.contact-page-popup-wrapper').removeClass('dnone');
+    }
+    if ($('.request-menu-wrapper .content-wrapper .wpcf7-form').hasClass('sent')) {
+      $('.contact-page-popup-wrapper').removeClass('dnone');
+    }
+  }
+});
