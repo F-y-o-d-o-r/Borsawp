@@ -163,7 +163,7 @@ foreach ($posts as $post) {
 }
 wp_reset_postdata(); // сброс
 ?>
-            <a class="btn-more mobile" href="#" title="more">Все новости<svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <a class="btn-more mobile" href="/news" title="more">Все новости<svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0.656432 19.1095L1.84379 20L9.34375 10L1.84379 -6.55667e-07L0.656434 0.890519L7.4885 10L0.656432 19.1095Z" fill="#3ECC29" /></svg></a>
                 </div>
         </div>
