@@ -4,21 +4,21 @@ Template Name: page-products
 Template Post Type: page
  */
 get_header();
-$categories = get_categories( array(
-  'taxonomy'     => 'category',
-  'type'         => 'post',
-  'child_of'     => 0,
-  'parent'       => '',
-  'orderby'      => 'name',
-  'order'        => 'ASC',
-  'hide_empty'   => 1,
-  'hierarchical' => 1,
-  'exclude'      => '14',
-  'include'      => '',
-  'number'       => 0,
-  'pad_counts'   => false,
-  // полный список параметров смотрите в описании функции http://wp-kama.ru/function/get_terms
-) );
+$categories = get_categories(array(
+    'taxonomy' => 'category',
+    'type' => 'post',
+    'child_of' => 0,
+    'parent' => '',
+    'orderby' => 'name',
+    'order' => 'ASC',
+    'hide_empty' => 1,
+    'hierarchical' => 1,
+    'exclude' => '14',
+    'include' => '',
+    'number' => 0,
+    'pad_counts' => false,
+    // полный список параметров смотрите в описании функции http://wp-kama.ru/function/get_terms
+));
 ?>
 
 <main>
@@ -26,32 +26,32 @@ $categories = get_categories( array(
         <div class="container">
           <p class="breadcrambs">
             <?php
-            the_breadcrumb();
-            ?>
+the_breadcrumb();
+?>
           </p>
           <h1 class="breadcrambs-h1">Наша продукция</h1>
           <div class="products-wrapper">
           <?PHP
-          if( $categories ){
-            foreach( $categories as $category ){
-              // Получаем ID таксономии
-              $term_id = $category->term_id;
-              // получим ID картинки из метаполя термина
-              $term_thumbnail_id = carbon_get_term_meta( $term_id, 'thumb');
-              // ссылка на полный размер картинки по ID вложения
-              $term_thumbnail_url = wp_get_attachment_image_url( $term_thumbnail_id, 'large' );
-              
-              ?>
-              <a class="product-item" href="<?PHP echo get_category_link( $category->term_id ) ?>" title="<?PHP echo sprintf( __( "Вся продукция в категории в %s" ), $category->name ) ?>"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+if ($categories) {
+    foreach ($categories as $category) {
+        // Получаем ID таксономии
+        $term_id = $category->term_id;
+        // получим ID картинки из метаполя термина
+        $term_thumbnail_id = carbon_get_term_meta($term_id, 'thumb');
+        // ссылка на полный размер картинки по ID вложения
+        $term_thumbnail_url = wp_get_attachment_image_url($term_thumbnail_id, 'large');
+
+        ?>
+              <a class="product-item" href="<?PHP echo get_category_link($category->term_id) ?>" title="<?PHP echo sprintf(__("Вся продукция в категории в %s"), $category->name) ?>"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="15" cy="15" r="15" fill="#3ECC29" />
                   <path d="M22.9471 14.6694H15.3306V7H14.6694V14.6694H7V15.3306H14.6694V23H15.3306V15.3306H23V14.6694H22.9471Z" fill="white" /></svg>
                 <div class="product-item__header"><?PHP echo $category->name ?></div>
                 <div class="product-item__image" style="background-image:url('<?PHP echo $term_thumbnail_url; ?>')"></div>
               </a>
               <?PHP
-            }
-          }
-          ?>
+}
+}
+?>
             </div>
         </div>
       </section>

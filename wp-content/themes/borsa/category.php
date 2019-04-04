@@ -1,19 +1,19 @@
 <?php
 get_header();
-$thisCat = get_category( get_query_var('cat') );
+$thisCat = get_category(get_query_var('cat'));
 // параметры по умолчанию
-$posts = get_posts( array(
-  'numberposts' => -1,
-  'category'    => $thisCat->cat_ID,
-  'orderby'     => 'date',
-  'order'       => 'DESC',
-  'include'     => array(),
-  'exclude'     => array(),
-  'meta_key'    => '',
-  'meta_value'  =>'',
-  'post_type'   => 'post',
-  'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
-) );
+$posts = get_posts(array(
+    'numberposts' => -1,
+    'category' => $thisCat->cat_ID,
+    'orderby' => 'date',
+    'order' => 'DESC',
+    'include' => array(),
+    'exclude' => array(),
+    'meta_key' => '',
+    'meta_value' => '',
+    'post_type' => 'post',
+    'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+));
 ?>
 
 <main>
@@ -23,38 +23,38 @@ $posts = get_posts( array(
             <a href='/'>Главная / </a>
             <a href='/products/'>Продукция / </a>
             <?php
-              echo $thisCat->name;
-              // the_breadcrumb();
-            ?>
+echo $thisCat->name;
+// the_breadcrumb();
+ ?>
           </p>
           <h1 class="breadcrambs-h1">
             <?php
-              $thisCat = get_category( get_query_var('cat') );
-              echo $thisCat->name;
-              // the_breadcrumb();
-            ?>
+$thisCat = get_category(get_query_var('cat'));
+echo $thisCat->name;
+// the_breadcrumb();
+?>
           </h1>
           <div class="products-wrapper">
           <?PHP
-          foreach( $posts as $post ){
-            setup_postdata($post);
-              // формат вывода the_title() ...
-              ?>
+foreach ($posts as $post) {
+    setup_postdata($post);
+    // формат вывода the_title() ...
+    ?>
               <a class="product-item" href="<?PHP echo get_permalink(); ?>" title="product"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="15" cy="15" r="15" fill="#3ECC29" />
                   <path d="M22.9471 14.6694H15.3306V7H14.6694V14.6694H7V15.3306H14.6694V23H15.3306V15.3306H23V14.6694H22.9471Z" fill="white" /></svg>
                 <div class="product-item__header"><?PHP echo the_title(); ?></div>
-                <?php if (has_post_thumbnail( $post->ID ) ): ?>
-                  <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+                <?php if (has_post_thumbnail($post->ID)): ?>
+                  <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'single-post-thumbnail');?>
                   <div class="product-item__image" style="background-image:url('<?PHP echo $image[0]; ?>')"></div>
-                <?php endif; ?>
+                <?php endif;?>
               </a>
               <?PHP
-          }
-          ?>
+}
+?>
               <?PHP
-              wp_reset_postdata(); // сброс
-              ?>
+wp_reset_postdata(); // сброс
+?>
             </div>
         </div>
       </section>
