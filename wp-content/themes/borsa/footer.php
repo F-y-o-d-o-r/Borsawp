@@ -64,7 +64,7 @@ wp_nav_menu([
           </nav>
         </div>
         <div class="row flex">
-          <p>© 2019 Борса. Все права защищены.</p>
+          <p>© 2019 БОРСА МСК. Все права защищены.</p>
           <div class="social-wrapper"><a class="facebook-footer-link" href="<?php echo carbon_get_theme_option('link_fb'); ?>" title="facebook"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M24.2628 17.6691H21.5658V15.9003C21.5658 15.236 22.0061 15.0812 22.3161 15.0812C22.6255 15.0812 24.2194 15.0812 24.2194 15.0812V12.1609L21.5982 12.1506C18.6885 12.1506 18.0264 14.3287 18.0264 15.7225V17.6691H16.3436V20.6783H18.0264C18.0264 24.5402 18.0264 29.1933 18.0264 29.1933H21.5658C21.5658 29.1933 21.5658 24.4943 21.5658 20.6783H23.9541L24.2628 17.6691Z" fill="#808080" />
                 <circle cx="20" cy="20" r="19.5" stroke="#808080" /></svg></a><a class="instagram-footer-link" href="<?php echo carbon_get_theme_option('link_insta'); ?>" title="instagram"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">

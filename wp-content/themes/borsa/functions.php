@@ -190,168 +190,162 @@ function the_breadcrumb()
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 // настройки темы
-add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' );
-function crb_attach_theme_options() {
-  // popup slider - производство production page, control page, job page
-    Container::make( 'post_meta', 'Slider' )
-    ->where( 'post_id', '=', '25' )
-    ->or_where( 'post_id', '=', '135' )
-    ->or_where( 'post_id', '=', '138' )
-    ->add_fields( array(
-      Field::make("image", "production_photo", "Фото для вызова слайдера"),
-      Field::make('text', 'production_slider_text', 'Текст под слайдером'),
-      Field::make( 'media_gallery', 'production_hidden_gallery', __( 'Слайдер скрытый' ) )
-    ));
+add_action('carbon_fields_register_fields', 'crb_attach_theme_options');
+function crb_attach_theme_options()
+{
+    // popup slider - производство production page, control page, job page
+    Container::make('post_meta', 'Slider')
+        ->where('post_id', '=', '25')
+        ->or_where('post_id', '=', '135')
+        ->or_where('post_id', '=', '138')
+        ->add_fields(array(
+            Field::make("image", "production_photo", "Фото для вызова слайдера"),
+            Field::make('text', 'production_slider_text', 'Текст под слайдером'),
+            Field::make('media_gallery', 'production_hidden_gallery', __('Слайдер скрытый')),
+        ));
     // news
-    Container::make( 'post_meta', 'News' )
-    ->show_on_post_type('news')
-    ->add_fields( array(
-      Field::make("image", "news_photo", "Фото для вызова слайдера"),
-      Field::make('text', 'news_slider_text', 'Текст под слайдером'),
-      Field::make( 'media_gallery', 'news_hidden_gallery', __( 'Слайдер скрытый' ) )
-    ));
-    // job
-    // Container::make( 'post_meta', 'Вакансии' )
-    // ->where( 'post_id', '=', '138' )
-    // ->add_fields( array(
-    //   Field::make( 'complex', 'jobs', 'Работа' )
-    //           ->add_fields( array(
-    //             Field::make( 'text', 'job_name', 'Название' ),
-    //             Field::make( 'text', 'job_link', 'Ссылка' ),
-    //             Field::make("image", "job_img", "Картинка"),
-    //           )
-    //           )
-    //           ->help_text( 'Перечислите вакансии' ),
-    // ));
+    Container::make('post_meta', 'News')
+        ->show_on_post_type('news')
+        ->add_fields(array(
+            Field::make("image", "news_photo", "Фото для вызова слайдера"),
+            Field::make('text', 'news_slider_text', 'Текст под слайдером'),
+            Field::make('media_gallery', 'news_hidden_gallery', __('Слайдер скрытый')),
+        ));
     // product
-    Container::make( 'post_meta', 'Table' )
-    ->show_on_post_type('post')
-    ->add_fields( array(
-      Field::make( 'complex', 'prod_main_slider_complex', 'Слайдер продукта' )
-              ->add_fields( array(
-                Field::make( 'text', 'prod_main_slide_name', 'Описание' ),
-                Field::make("image", "prod_main_slider", "Фото для главного слайдера"),
-              )
-              )
-              ->help_text( 'Перечислите слайды.' ),
-      Field::make('text', 'prod_info', 'Info продукта'),
-      Field::make("rich_text", "prod_table_cont", "Характеристики контейнеров")
-      ->help_text('Характеристики контейнеров'),
-      Field::make("image", "prod_photo", "Фото для вызова слайдера"),
-      Field::make('text', 'prod_slider_text', 'Текст под слайдером'),
-      Field::make( 'media_gallery', 'prod_hidden_gallery', __( 'Слайдер скрытый' ) )
-    ));
+    Container::make('post_meta', 'Table')
+        ->show_on_post_type('post')
+        ->add_fields(array(
+            Field::make('complex', 'prod_main_slider_complex', 'Слайдер продукта')
+                ->add_fields(array(
+                    Field::make('text', 'prod_main_slide_name', 'Описание'),
+                    Field::make("image", "prod_main_slider", "Фото для главного слайдера"),
+                )
+                )
+                ->help_text('Перечислите слайды.'),
+            Field::make('text', 'prod_info', 'Info продукта'),
+            Field::make("rich_text", "prod_table_cont", "Характеристики контейнеров")
+                ->help_text('Характеристики контейнеров'),
+            Field::make("image", "prod_photo", "Фото для вызова слайдера"),
+            Field::make('text', 'prod_slider_text', 'Текст под слайдером'),
+            Field::make('media_gallery', 'prod_hidden_gallery', __('Слайдер скрытый')),
+        ));
     // diff theme settings
-    Container::make( 'theme_options', 'Borsa Options' )
-  ->add_fields(array(
-    Field::make('text', 'phone_one', 'Основной телефон'),
-    Field::make('text', 'phone_two', 'Отдел продаж'),
-    Field::make('text', 'email', 'Email'),
-    Field::make('text', 'adr_fact', 'Фактический адрес'),
-    Field::make('text', 'adr_ur', 'Юридический адрес'),
-    Field::make('text', 'adr_post', 'Почтовый адрес'),
-    Field::make('text', 'link_fb', 'Фейсбук'),
-    Field::make('text', 'link_insta', 'Инстаграм'),
-    Field::make('text', 'link_youtube', 'Ютуб'),
-    Field::make("file", "price", "ПРАЙС-ЛИСТ")
-    ->set_value_type('url') // сохранить в метаполе ссылку на файл
-  ));
+    Container::make('theme_options', 'Borsa Options')
+        ->add_fields(array(
+            Field::make('text', 'phone_one', 'Основной телефон'),
+            Field::make('text', 'phone_two', 'Отдел продаж'),
+            Field::make('text', 'phone_title', 'Название отдела'),
+            Field::make('text', 'email', 'Email'),
+            Field::make('text', 'adr_fact', 'Фактический адрес'),
+            Field::make('text', 'adr_ur', 'Юридический адрес'),
+            Field::make('text', 'adr_post', 'Почтовый адрес'),
+            Field::make('text', 'link_fb', 'Фейсбук'),
+            Field::make('text', 'link_insta', 'Инстаграм'),
+            Field::make('text', 'link_youtube', 'Ютуб'),
+            Field::make("file", "price", "ПРАЙС-ЛИСТ")
+                ->set_value_type('url'), // сохранить в метаполе ссылку на файл
+        ));
 }
-add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options1' );
-function crb_attach_theme_options1() {
-    Container::make( 'term_meta', 'IMG' )
-    ->add_fields( array(
-      Field::make( 'image', 'thumb', 'Миниатюра' ),
-    ) );
+add_action('carbon_fields_register_fields', 'crb_attach_theme_options1');
+function crb_attach_theme_options1()
+{
+    Container::make('term_meta', 'IMG')
+        ->add_fields(array(
+            Field::make('image', 'thumb', 'Миниатюра'),
+        ));
 }
-add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options2' );
-function crb_attach_theme_options2() {
+add_action('carbon_fields_register_fields', 'crb_attach_theme_options2');
+function crb_attach_theme_options2()
+{
     // job
-    Container::make( 'post_meta', 'Вакансии' )
-    ->where( 'post_id', '=', '138' )
-    ->add_fields( array(
-      Field::make( 'complex', 'jobs', 'Работа' )
-              ->add_fields( array(
-                Field::make( 'text', 'job_name', 'Название' ),
-                Field::make( 'text', 'job_link', 'Ссылка' ),
-                Field::make("image", "job_img", "Картинка"),
-              )
-              )
-              ->help_text( 'Перечислите вакансии' ),
-    ));
+    Container::make('post_meta', 'Вакансии')
+        ->where('post_id', '=', '138')
+        ->add_fields(array(
+            Field::make('complex', 'jobs', 'Работа')
+                ->add_fields(array(
+                    Field::make('text', 'job_name', 'Название'),
+                    Field::make('text', 'job_link', 'Ссылка'),
+                    Field::make("image", "job_img", "Картинка"),
+                )
+                )
+                ->help_text('Перечислите вакансии'),
+        ));
 }
 // END CarbonFields
 // START Post types
 add_action('init', 'slider_init');
-function slider_init(){
-  register_post_type('slider', array(
-    'labels'             => array(
-      'name'               => 'Слайдер', // Основное название типа записи
-      'singular_name'      => 'Слайд', // отдельное название записи типа Book
-      'add_new'            => 'Добавить новый',
-      'add_new_item'       => 'Добавить новый слайд',
-      'edit_item'          => 'Редактировать слайд',
-      'new_item'           => 'Новый слайд',
-      'view_item'          => 'Посмотреть слайд',
-      'search_items'       => 'Найти слайд',
-      'not_found'          =>  'Слайдов не найдено',
-      'not_found_in_trash' => 'В корзине слайдов не найдено',
-      'parent_item_colon'  => '',
-      'menu_name'          => 'Слайдер'
-      ),
-    'public'             => true,
-    'publicly_queryable' => true,
-    'show_ui'            => true,
-    'show_in_menu'       => true,
-    'query_var'          => true,
-    'rewrite'            => true,
-    'capability_type'    => 'post',
-    'has_archive'        => true,
-    'hierarchical'       => false,
-    'menu_position'      => null,
-    'supports'           => array('title','editor','author','thumbnail','excerpt','comments')
-  ) );
+function slider_init()
+{
+    register_post_type('slider', array(
+        'labels' => array(
+            'name' => 'Слайдер', // Основное название типа записи
+            'singular_name' => 'Слайд', // отдельное название записи типа Book
+            'add_new' => 'Добавить новый',
+            'add_new_item' => 'Добавить новый слайд',
+            'edit_item' => 'Редактировать слайд',
+            'new_item' => 'Новый слайд',
+            'view_item' => 'Посмотреть слайд',
+            'search_items' => 'Найти слайд',
+            'not_found' => 'Слайдов не найдено',
+            'not_found_in_trash' => 'В корзине слайдов не найдено',
+            'parent_item_colon' => '',
+            'menu_name' => 'Слайдер',
+        ),
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'has_archive' => true,
+        'hierarchical' => false,
+        'menu_position' => null,
+        'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments'),
+    ));
 }
 
 add_action('init', 'news_init');
-function news_init(){
-  register_post_type('news', array(
-    'labels'             => array(
-      'name'               => 'Новости', // Основное название типа записи
-      'singular_name'      => 'Новость', // отдельное название записи типа Book
-      'add_new'            => 'Добавить новость',
-      'add_new_item'       => 'Добавить новую новость',
-      'edit_item'          => 'Редактировать новость',
-      'new_item'           => 'Новая новость',
-      'view_item'          => 'Посмотреть новость',
-      'search_items'       => 'Найти новость',
-      'not_found'          => 'Новость не найдена',
-      'not_found_in_trash' => 'В корзине новостей не найдено',
-      'parent_item_colon'  => '',
-      'menu_name'          => 'Новости'
-      ),
-    'public'             => true,
-    'publicly_queryable' => true,
-    'show_ui'            => true,
-    'show_in_menu'       => true,
-    'query_var'          => true,
-    'rewrite'            => true,
-    'capability_type'    => 'post',
-    'has_archive'        => true,
-    'hierarchical'       => false,
-    'menu_position'      => null,
-    'supports'           => array('title','editor','author','thumbnail','excerpt','comments')
-  ) );
+function news_init()
+{
+    register_post_type('news', array(
+        'labels' => array(
+            'name' => 'Новости', // Основное название типа записи
+            'singular_name' => 'Новость', // отдельное название записи типа Book
+            'add_new' => 'Добавить новость',
+            'add_new_item' => 'Добавить новую новость',
+            'edit_item' => 'Редактировать новость',
+            'new_item' => 'Новая новость',
+            'view_item' => 'Посмотреть новость',
+            'search_items' => 'Найти новость',
+            'not_found' => 'Новость не найдена',
+            'not_found_in_trash' => 'В корзине новостей не найдено',
+            'parent_item_colon' => '',
+            'menu_name' => 'Новости',
+        ),
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'has_archive' => true,
+        'hierarchical' => false,
+        'menu_position' => null,
+        'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments'),
+    ));
 }
 // END Post types
 // START добавляем класс к пункту меню
-add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
-function special_nav_class($classes, $item){
-    if($item->title == 'Прайс-лист'){
-      $classes[] = 'price-list';
+add_filter('nav_menu_css_class', 'special_nav_class', 10, 2);
+function special_nav_class($classes, $item)
+{
+    if ($item->title == 'Прайс-лист') {
+        $classes[] = 'price-list';
     }
-    if($item->title == 'Продукция'){
-      $classes[] = 'product';
+    if ($item->title == 'Продукция') {
+        $classes[] = 'product';
     }
     return $classes;
 }

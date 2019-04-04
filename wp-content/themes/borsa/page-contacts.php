@@ -23,15 +23,23 @@ the_breadcrumb();
             <div class="two-col-wrapper">
               <div class="left-part">
                 <p><span>T:</span><a href="tel:<?php echo carbon_get_theme_option('phone_one'); ?>"><?php echo carbon_get_theme_option('phone_one'); ?></a></p>
-                <p><span>T:</span><a href="tel:<?php echo carbon_get_theme_option('phone_two'); ?>"><?php echo carbon_get_theme_option('phone_two'); ?> (отдел продаж)</a></p>
+                <p><span>T:</span>
+                  <a href="tel:<?php echo carbon_get_theme_option('phone_two'); ?>"><?php echo carbon_get_theme_option('phone_two'); ?>
+                  <?php
+if (carbon_get_theme_option('phone_title')) {
+    echo carbon_get_theme_option('phone_title');
+}
+?>
+                  </a>
+                </p>
                 <p><span>E:</span><a href="mailto:<?php echo carbon_get_theme_option('email'); ?>"><?php echo carbon_get_theme_option('email'); ?></a></p>
                 <p><span>с 9 до 21:00 (без обеда и выходных)</span></p>
               </div>
               <div class="right-part">
-                <p><span>Общество с ограниченной ответственностью "Борса" ИНН/КПП:</span><br><span>7736305438/773601001 ОГРН: 1177746536890</span></p>
-                <p><span>Фактический адрес:</span><br><a href="https://goo.gl/maps/g1zpUZMFSbN2" title="google map" target="_blank"><?php echo carbon_get_theme_option('adr_fact'); ?></a></p>
-                <p><span>Юридический адрес:</span><br><a href="https://goo.gl/maps/WYzQ4mV3P972" title="google map" target="_blank"><?php echo carbon_get_theme_option('adr_ur'); ?></a></p>
-                <p><span>Почтовый адрес:</span><br><a href="https://goo.gl/maps/WYzQ4mV3P972" title="google map" target="_blank"><?php echo carbon_get_theme_option('adr_post'); ?></a></p>
+                <p><span>Общество с ограниченной ответственностью "БОРСА МСК" ИНН/КПП:</span><br><span>7736305438/773601001 ОГРН: 1177746536890</span></p>
+                <p><span>Фактический адрес:</span><br><a href="https://goo.gl/maps/V9oNfsJX23v" title="google map" target="_blank"><?php echo carbon_get_theme_option('adr_fact'); ?></a></p>
+                <p><span>Юридический адрес:</span><br><a href="https://goo.gl/maps/V9oNfsJX23v" title="google map" target="_blank"><?php echo carbon_get_theme_option('adr_ur'); ?></a></p>
+                <p><span>Почтовый адрес:</span><br><a href="https://goo.gl/maps/V9oNfsJX23v" title="google map" target="_blank"><?php echo carbon_get_theme_option('adr_post'); ?></a></p>
               </div>
             </div>
           </div>
@@ -52,7 +60,7 @@ echo do_shortcode('[contact-form-7 id="197" title="contacts page"]');
         </div>
       </section>
       <section class="contact-page-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2276.5680671822693!2d36.476043015909504!3d55.208313180411245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46cacf9c7e4ec303%3A0x12c6ddab43f2f853!2z0YPQuy4g0KPRgNC40YbQutC-0LPQviwgMzAsINCR0L7RgNC-0LLRgdC6LCDQmtCw0LvRg9C20YHQutCw0Y8g0L7QsdC7Liwg0KDQvtGB0YHQuNGPLCAyNDkwMTA!5e0!3m2!1sru!2sua!4v1553606413464" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2247.268838278495!2d37.4127713!3d55.71908!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54ef309ba4795%3A0xd037d169e2105f15!2z0JzQvtC20LDQudGB0LrQvtC1INGILiwgMzYsINGN0YLQsNC2IDEsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMjEzNTQ!5e0!3m2!1sru!2sua!4v1554368839987!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         </section>
       <!-- <section class="popup-wrapper contact-page-popup-wrapper dnone">
         <div class="container">

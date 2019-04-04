@@ -46,7 +46,7 @@
           <div id="nav-icon"><span></span><span></span><span></span></div>
           <div class="menu-name">Меню</div>
         </div><a class="logo-wrapper flex" href="/" title="main page"><img src="<?PHP bloginfo('template_url');?>/img/header-logo.png" alt="header logo">
-          <p>Производство мягких контейнеров / биг бэг</p>
+          <p>Производство мягких контейнеров / биг бэгов</p>
         </a>
         <nav>
           <!-- <ul class="flex">
@@ -57,25 +57,25 @@
             <li><a href="#" title="menu">Контакты</a></li>
           </ul> -->
           <?php
-            wp_nav_menu([
-                'theme_location' => '',
-                'menu' => 'Header-menu',
-                'container' => 'div',
-                'container_class' => '',
-                'container_id' => '',
-                'menu_class' => 'flex',
-                'menu_id' => '',
-                'echo' => true,
-                'fallback_cb' => 'wp_page_menu',
-                'before' => '',
-                'after' => '',
-                'link_before' => '',
-                'link_after' => '',
-                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                'depth' => 0,
-                'walker' => '',
-            ]);
-          ?>
+wp_nav_menu([
+    'theme_location' => '',
+    'menu' => 'Header-menu',
+    'container' => 'div',
+    'container_class' => '',
+    'container_id' => '',
+    'menu_class' => 'flex',
+    'menu_id' => '',
+    'echo' => true,
+    'fallback_cb' => 'wp_page_menu',
+    'before' => '',
+    'after' => '',
+    'link_before' => '',
+    'link_after' => '',
+    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+    'depth' => 0,
+    'walker' => '',
+]);
+?>
         </nav>
         <a class="tel header-tel" href="tel:<?php echo carbon_get_theme_option('phone_one'); ?>" title="phone number"><?php echo carbon_get_theme_option('phone_one'); ?></a><button class="btn-main" id="leftOrder">Оставить заявку</button>
       </div>
@@ -87,25 +87,25 @@
         <div class="nav-wrapper">
           <nav>
           <?php
-            wp_nav_menu([
-                'theme_location' => '',
-                'menu' => 'mobile-left',
-                'container' => '',
-                'container_class' => '',
-                'container_id' => '',
-                'menu_class' => 'flex left-part',
-                'menu_id' => '',
-                'echo' => true,
-                'fallback_cb' => 'wp_page_menu',
-                'before' => '',
-                'after' => '',
-                'link_before' => '',
-                'link_after' => '',
-                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                'depth' => 0,
-                'walker' => '',
-            ]);
-          ?>
+wp_nav_menu([
+    'theme_location' => '',
+    'menu' => 'mobile-left',
+    'container' => '',
+    'container_class' => '',
+    'container_id' => '',
+    'menu_class' => 'flex left-part',
+    'menu_id' => '',
+    'echo' => true,
+    'fallback_cb' => 'wp_page_menu',
+    'before' => '',
+    'after' => '',
+    'link_before' => '',
+    'link_after' => '',
+    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+    'depth' => 0,
+    'walker' => '',
+]);
+?>
             <!-- <ul class="flex left-part"> -->
               <!-- <li><a class="true" href="#" title="menu">О компании</a></li>
               <li><a class="true" href="#" title="menu">Продукция</a></li>
@@ -115,25 +115,25 @@
             <!-- </ul> -->
             <div class="line"></div>
             <?php
-            wp_nav_menu([
-                'theme_location' => '',
-                'menu' => 'mobile-right',
-                'container' => '',
-                'container_class' => '',
-                'container_id' => '',
-                'menu_class' => 'flex right-part',
-                'menu_id' => '',
-                'echo' => true,
-                'fallback_cb' => 'wp_page_menu',
-                'before' => '',
-                'after' => '',
-                'link_before' => '',
-                'link_after' => '',
-                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                'depth' => 0,
-                'walker' => '',
-            ]);
-          ?>
+wp_nav_menu([
+    'theme_location' => '',
+    'menu' => 'mobile-right',
+    'container' => '',
+    'container_class' => '',
+    'container_id' => '',
+    'menu_class' => 'flex right-part',
+    'menu_id' => '',
+    'echo' => true,
+    'fallback_cb' => 'wp_page_menu',
+    'before' => '',
+    'after' => '',
+    'link_before' => '',
+    'link_after' => '',
+    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+    'depth' => 0,
+    'walker' => '',
+]);
+?>
             <!-- <ul class="flex right-part"> -->
               <!-- <li><a href="#" title="menu">Новости</a></li>
               <li><a href="#" title="menu">Карьера</a></li>
@@ -152,7 +152,7 @@
               <circle cx="20" cy="20" r="19.5" stroke="#3ECC29" /></svg></a><a href="<?php echo carbon_get_theme_option('link_youtube'); ?>" title="youtube"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M29.9376 16.0202C29.9376 16.0202 29.7407 14.6486 29.1368 14.0443C28.3713 13.2517 27.5127 13.2479 27.1191 13.2015C24.3011 13 20.0738 13 20.0738 13H20.0648C20.0648 13 15.8377 13 13.0194 13.2015C12.6258 13.2479 11.7677 13.2517 11.0018 14.0443C10.3978 14.6486 10.2014 16.0202 10.2014 16.0202C10.2014 16.0202 10 17.631 10 19.2417V20.7521C10 22.3626 10.2014 23.9733 10.2014 23.9733C10.2014 23.9733 10.3978 25.345 11.0018 25.9492C11.7677 26.7421 12.774 26.7167 13.2222 26.7998C14.8335 26.9527 20.0693 27 20.0693 27C20.0693 27 24.3011 26.9936 27.1191 26.7923C27.5127 26.7459 28.3713 26.7421 29.1368 25.9492C29.7407 25.345 29.9376 23.9733 29.9376 23.9733C29.9376 23.9733 30.1386 22.3626 30.1386 20.7521V19.2417C30.1386 17.631 29.9376 16.0202 29.9376 16.0202ZM17.9903 22.5818L17.9894 16.9892L23.4309 19.7951L17.9903 22.5818Z" fill="#3ECC29" />
               <circle cx="20" cy="20" r="19.5" stroke="#3ECC29" /></svg></a></div><a class="terms" href="/terms" title="Пользовательское соглашение">Пользовательское соглашение</a>
-        <p class="rights">© 2019 Борса. Все права защищены.</p>
+        <p class="rights">© 2019 БОРСА МСК. Все права защищены.</p>
       </div>
     </div>
     <!--END Header burger menu-->
@@ -185,8 +185,8 @@
         <div class="contacts-wrapper"><a href="tel<?php echo carbon_get_theme_option('phone_one'); ?>"><?php echo carbon_get_theme_option('phone_one'); ?></a><a href="mailto:<?php echo carbon_get_theme_option('email'); ?>u"><?php echo carbon_get_theme_option('email'); ?></a></div>
         <div class="form-wrapper">
         <?php
-          echo do_shortcode('[contact-form-7 id="196" title="popup form"]');
-        ?>
+echo do_shortcode('[contact-form-7 id="196" title="popup form"]');
+?>
           <!-- <form>
             <div class="inputs-wrapper">
               <input type="text" name="name" placeholder="Ваше имя" required="true">
