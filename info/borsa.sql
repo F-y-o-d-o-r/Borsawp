@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 04, 2019 at 12:32 PM
+-- Generation Time: Apr 04, 2019 at 12:39 PM
 -- Server version: 8.0.15
 -- PHP Version: 7.3.2
 
@@ -588,7 +588,7 @@ INSERT INTO `borsawp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) 
 (946, 101, '_prod_hidden_gallery|||12|value', '76'),
 (947, 101, '_prod_hidden_gallery|||13|value', '75'),
 (948, 101, '_prod_hidden_gallery|||14|value', '74'),
-(985, 106, '_edit_lock', '1554370325:1'),
+(985, 106, '_edit_lock', '1554370311:1'),
 (988, 106, '_thumbnail_id', '33'),
 (989, 106, '_edit_last', '1'),
 (998, 107, '_prod_main_slider_complex|||0|_empty', ''),
@@ -1302,7 +1302,13 @@ INSERT INTO `borsawp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) 
 (2306, 107, '_prod_table_cont', ''),
 (2307, 107, '_prod_photo', ''),
 (2308, 107, '_prod_slider_text', ''),
-(2309, 107, '_prod_hidden_gallery|||0|_empty', '');
+(2309, 107, '_prod_hidden_gallery|||0|_empty', ''),
+(2310, 220, '_edit_last', '1'),
+(2311, 220, '_thumbnail_id', '211'),
+(2312, 220, '_edit_lock', '1554370430:1'),
+(2313, 221, '_edit_lock', '1554370780:1'),
+(2314, 221, '_edit_last', '1'),
+(2315, 221, '_thumbnail_id', '216');
 
 -- --------------------------------------------------------
 
@@ -1547,7 +1553,9 @@ INSERT INTO `borsawp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, 
 (216, 1, '2019-04-04 12:22:10', '2019-04-04 09:22:10', '', 'prodaction2', '', 'inherit', 'open', 'closed', '', 'prodaction2', '', '', '2019-04-04 12:22:10', '2019-04-04 09:22:10', '', 0, 'http://borsawp/wp-content/uploads/2019/04/prodaction2.jpg', 0, 'attachment', 'image/jpeg', 0),
 (217, 1, '2019-04-04 12:29:01', '2019-04-04 09:29:01', '', 'bg_whitq', '', 'inherit', 'open', 'closed', '', 'bg_whitq', '', '', '2019-04-04 12:29:01', '2019-04-04 09:29:01', '', 0, 'http://borsawp/wp-content/uploads/2019/04/bg_whitq.jpg', 0, 'attachment', 'image/jpeg', 0),
 (218, 1, '2019-04-04 12:29:14', '2019-04-04 09:29:14', '', 'seven', '', 'inherit', 'open', 'closed', '', 'seven', '', '', '2019-04-04 12:29:14', '2019-04-04 09:29:14', '', 0, 'http://borsawp/wp-content/uploads/2019/04/seven.jpg', 0, 'attachment', 'image/jpeg', 0),
-(219, 1, '2019-04-04 12:29:34', '2019-04-04 09:29:34', 'вава', 'слайдер 3', '', 'trash', 'open', 'closed', '', '%d1%81%d0%bb%d0%b0%d0%b9%d0%b4%d0%b5%d1%80-3__trashed', '', '', '2019-04-04 12:30:51', '2019-04-04 09:30:51', '', 0, 'http://borsawp/?post_type=slider&#038;p=219', 0, 'slider', '', 0);
+(219, 1, '2019-04-04 12:29:34', '2019-04-04 09:29:34', 'вава', 'слайдер 3', '', 'trash', 'open', 'closed', '', '%d1%81%d0%bb%d0%b0%d0%b9%d0%b4%d0%b5%d1%80-3__trashed', '', '', '2019-04-04 12:30:51', '2019-04-04 09:30:51', '', 0, 'http://borsawp/?post_type=slider&#038;p=219', 0, 'slider', '', 0),
+(220, 1, '2019-04-04 12:35:37', '2019-04-04 09:35:37', 'текст', '', '', 'publish', 'open', 'closed', '', '%d1%82%d0%b5%d0%ba%d1%81', '', '', '2019-04-04 12:36:13', '2019-04-04 09:36:13', '', 0, 'http://borsawp/?post_type=slider&#038;p=220', 0, 'slider', '', 0),
+(221, 1, '2019-04-04 12:36:33', '2019-04-04 09:36:33', 'кекс', '', '', 'publish', 'open', 'closed', '', '221', '', '', '2019-04-04 12:36:33', '2019-04-04 09:36:33', '', 0, 'http://borsawp/?post_type=slider&#038;p=221', 0, 'slider', '', 0);
 
 -- --------------------------------------------------------
 
@@ -1951,13 +1959,13 @@ ALTER TABLE `borsawp_options`
 -- AUTO_INCREMENT for table `borsawp_postmeta`
 --
 ALTER TABLE `borsawp_postmeta`
-  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2310;
+  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2316;
 
 --
 -- AUTO_INCREMENT for table `borsawp_posts`
 --
 ALTER TABLE `borsawp_posts`
-  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=220;
+  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=222;
 
 --
 -- AUTO_INCREMENT for table `borsawp_termmeta`
