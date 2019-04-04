@@ -33,7 +33,7 @@ if (carbon_get_theme_option('phone_title')) {
                   </a>
                 </p>
                 <p><span>E:</span><a href="mailto:<?php echo carbon_get_theme_option('email'); ?>"><?php echo carbon_get_theme_option('email'); ?></a></p>
-                <p><span>с 9 до 21:00 (без обеда и выходных)</span></p>
+                <p><span><?php echo carbon_get_theme_option('time'); ?></span></p>
               </div>
               <div class="right-part">
                 <p><span>Общество с ограниченной ответственностью "БОРСА МСК" ИНН/КПП:</span><br><span>7736305438/773601001 ОГРН: 1177746536890</span></p>

@@ -236,6 +236,7 @@ function crb_attach_theme_options()
             Field::make('text', 'phone_two', 'Отдел продаж'),
             Field::make('text', 'phone_title', 'Название отдела'),
             Field::make('text', 'email', 'Email'),
+            Field::make('text', 'time', 'Время работы'),
             Field::make('text', 'adr_fact', 'Фактический адрес'),
             Field::make('text', 'adr_ur', 'Юридический адрес'),
             Field::make('text', 'adr_post', 'Почтовый адрес'),
@@ -272,6 +273,7 @@ function crb_attach_theme_options2()
         ));
 }
 // END CarbonFields
+
 // START Post types
 add_action('init', 'slider_init');
 function slider_init()
