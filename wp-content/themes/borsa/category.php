@@ -23,23 +23,23 @@ $posts = get_posts(array(
             <a href='/'>Главная / </a>
             <a href='/products/'>Продукция / </a>
             <?php
-echo $thisCat->name;
-// the_breadcrumb();
- ?>
-          </p>
-          <h1 class="breadcrambs-h1">
-            <?php
-$thisCat = get_category(get_query_var('cat'));
-echo $thisCat->name;
-// the_breadcrumb();
-?>
-          </h1>
-          <div class="products-wrapper">
-          <?PHP
-foreach ($posts as $post) {
-    setup_postdata($post);
-    // формат вывода the_title() ...
-    ?>
+            echo $thisCat->name;
+            // the_breadcrumb();
+            ?>
+                      </p>
+                      <h1 class="breadcrambs-h1">
+                        <?php
+            $thisCat = get_category(get_query_var('cat'));
+            echo $thisCat->name;
+            // the_breadcrumb();
+            ?>
+                      </h1>
+                      <div class="products-wrapper">
+                      <?PHP
+            foreach ($posts as $post) {
+                setup_postdata($post);
+                // формат вывода the_title() ...
+                ?>
               <a class="product-item" href="<?PHP echo get_permalink(); ?>" title="product"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="15" cy="15" r="15" fill="#3ECC29" />
                   <path d="M22.9471 14.6694H15.3306V7H14.6694V14.6694H7V15.3306H14.6694V23H15.3306V15.3306H23V14.6694H22.9471Z" fill="white" /></svg>
@@ -50,8 +50,8 @@ foreach ($posts as $post) {
                 <?php endif;?>
               </a>
               <?PHP
-}
-?>
+                  }
+                  ?>
               <?PHP
 wp_reset_postdata(); // сброс
 ?>

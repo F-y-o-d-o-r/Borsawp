@@ -51,18 +51,18 @@ if ($projects->have_posts()):
     while ($projects->have_posts()): $projects->the_post();
         // здесь HTML разметка поста
         ?>
-		              <a class="news__item clearfix" href="<?php echo get_post_permalink($post->ID) ?>" title="title">
-		                  <div class="news__content">
-		                    <div class="header">
-		                      <div class="header__left"><?php echo get_the_date('d'); ?><span><?php echo get_the_date('F Y'); ?></span></div>
-		                      <?php echo get_the_post_thumbnail_url() ? '<div class="header__right"></div>' : null; ?>
-		                    </div>
-		                    <div class="body"><?php echo $post->post_title; ?></div>
-		                  </div>
-		                  <div class="news__bg"></div>
-		                </a>
+                  <a class="news__item clearfix" href="<?php echo get_post_permalink($post->ID) ?>" title="title">
+                      <div class="news__content">
+                        <div class="header">
+                          <div class="header__left"><?php echo get_the_date('d'); ?><span><?php echo get_the_date('F Y'); ?></span></div>
+                          <?php echo carbon_get_the_post_meta('news_photo') ? '<div class="header__right"></div>' : null; ?>
+                        </div>
+                        <div class="body"><?php echo $post->post_title; ?></div>
+                      </div>
+                      <div class="news__bg"></div>
+                    </a>
 
-		              <?php
+                  <?php
     endwhile;
 endif;
 ?>
@@ -86,14 +86,14 @@ function prevlink($current)
 if ($projects->max_num_pages > 1): // если максимальное количество страниц больше 1, то выводим пагинацию
     // если это не последняя страница и не первая, то выводим ссылки на следующую и предыдущую страницу
     if ($projects->max_num_pages > $current_page && $current_page > 1): ?>
-	                <!-- <a href="<?php prevlink($current_page)?>">Предыдущая страница</a>
-	                <a href="<?php nextlink($current_page)?>">Следующая страница</a> -->
-	                <div class="btn-more-wrapper">
-	                  <a class="btn-more more-news" href="<?php prevlink($current_page)?>" title="more">Предыдущая страница</a>
-	                  <a class="btn-more more-news" href="<?php nextlink($current_page)?>" title="more">Следующая страница</a>
-	                </div>
-	              <!-- // если текущая страница является первой страницей, выводим только ссылку на следующую страницу -->
-	              <?php elseif ($current_page == 1): ?>
+                  <!-- <a href="<?php prevlink($current_page)?>">Предыдущая страница</a>
+                  <a href="<?php nextlink($current_page)?>">Следующая страница</a> -->
+                  <div class="btn-more-wrapper">
+                    <a class="btn-more more-news" href="<?php prevlink($current_page)?>" title="more">Предыдущая страница</a>
+                    <a class="btn-more more-news" href="<?php nextlink($current_page)?>" title="more">Следующая страница</a>
+                  </div>
+                <!-- // если текущая страница является первой страницей, выводим только ссылку на следующую страницу -->
+                <?php elseif ($current_page == 1): ?>
                 <!-- <a href="<?php nextlink($current_page)?>">Следующая страница</a> -->
                 <a class="btn-more more-news" href="<?php nextlink($current_page)?>" title="more">Следующая страница</a>
               <!-- // если текущая страница - это последняя страница, выводим ссылку только на предыдущую страницу -->

@@ -9,11 +9,11 @@ $categories = get_categories(array(
     'type' => 'post',
     'child_of' => 0,
     'parent' => '',
-    'orderby' => 'name',
+    'orderby' => 'ID',
     'order' => 'ASC',
     'hide_empty' => 1,
     'hierarchical' => 1,
-    'exclude' => '14',
+    'exclude' => '1',
     'include' => '',
     'number' => 0,
     'pad_counts' => false,
@@ -26,33 +26,67 @@ $categories = get_categories(array(
         <div class="container">
           <p class="breadcrambs">
             <?php
-the_breadcrumb();
-?>
+              the_breadcrumb();
+            ?>
           </p>
           <h1 class="breadcrambs-h1">Наша продукция</h1>
           <div class="products-wrapper">
-          <?PHP
-if ($categories) {
-    foreach ($categories as $category) {
-        // Получаем ID таксономии
-        $term_id = $category->term_id;
-        // получим ID картинки из метаполя термина
-        $term_thumbnail_id = carbon_get_term_meta($term_id, 'thumb');
-        // ссылка на полный размер картинки по ID вложения
-        $term_thumbnail_url = wp_get_attachment_image_url($term_thumbnail_id, 'large');
+            <?PHP
+            // вывод категорий
+              if ($categories) {
+                  foreach ($categories as $category) {
+                      // Получаем ID таксономии
+                      $term_id = $category->term_id;
+                      // получим ID картинки из метаполя термина
+                      $term_thumbnail_id = carbon_get_term_meta($term_id, 'thumb');
+                      // ссылка на полный размер картинки по ID вложения
+                      $term_thumbnail_url = wp_get_attachment_image_url($term_thumbnail_id, 'large');
 
-        ?>
-              <a class="product-item" href="<?PHP echo get_category_link($category->term_id) ?>" title="<?PHP echo sprintf(__("Вся продукция в категории в %s"), $category->name) ?>"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      ?>
+                            <a class="product-item" href="<?PHP echo get_category_link($category->term_id) ?>" title="<?PHP echo sprintf(__("Вся продукция в категории в %s"), $category->name) ?>"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="15" cy="15" r="15" fill="#3ECC29" />
+                                <path d="M22.9471 14.6694H15.3306V7H14.6694V14.6694H7V15.3306H14.6694V23H15.3306V15.3306H23V14.6694H22.9471Z" fill="white" /></svg>
+                              <div class="product-item__header"><?PHP echo $category->name ?></div>
+                              <div class="product-item__image" style="background-image:url('<?PHP echo $term_thumbnail_url; ?>')"></div>
+                            </a>
+                            <?PHP
+              }
+              }
+            ?>
+            <?PHP
+            // вывод рубрики без категории
+            $posts = get_posts(array(
+              'numberposts' => -1,
+              'category' => '1',
+              'orderby' => 'date',
+              'order' => 'DESC',
+              'include' => array(),
+              'exclude' => array(),
+              'meta_key' => '',
+              'meta_value' => '',
+              'post_type' => 'post',
+              'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+          ));
+            foreach ($posts as $post) {
+                setup_postdata($post);
+                // формат вывода the_title() ...
+                ?>
+              <a class="product-item" href="<?PHP echo get_permalink(); ?>" title="product"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="15" cy="15" r="15" fill="#3ECC29" />
                   <path d="M22.9471 14.6694H15.3306V7H14.6694V14.6694H7V15.3306H14.6694V23H15.3306V15.3306H23V14.6694H22.9471Z" fill="white" /></svg>
-                <div class="product-item__header"><?PHP echo $category->name ?></div>
-                <div class="product-item__image" style="background-image:url('<?PHP echo $term_thumbnail_url; ?>')"></div>
+                <div class="product-item__header"><?PHP echo the_title(); ?></div>
+                <?php if (has_post_thumbnail($post->ID)): ?>
+                  <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'single-post-thumbnail');?>
+                  <div class="product-item__image" style="background-image:url('<?PHP echo $image[0]; ?>')"></div>
+                <?php endif;?>
               </a>
               <?PHP
-}
-}
-?>
-            </div>
+                  }
+                  ?>
+              <?PHP
+                wp_reset_postdata(); // сброс
+              ?>
+          </div>
         </div>
       </section>
       <section class="products-page-advantages">
