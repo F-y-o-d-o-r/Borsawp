@@ -211,6 +211,18 @@ function crb_attach_theme_options()
             Field::make('text', 'news_slider_text', 'Текст под слайдером'),
             Field::make('media_gallery', 'news_hidden_gallery', __('Слайдер скрытый')),
         ));
+    Container::make('post_meta', 'Job')
+      ->where('post_id', '=', '138')
+      ->add_fields(array(
+          Field::make('complex', 'jobs', 'Работа')
+              ->add_fields(array(
+                  Field::make('text', 'job_name', 'Название'),
+                  Field::make('text', 'job_link', 'Ссылка'),
+                  Field::make("image", "job_img", "Картинка"),
+              )
+              )
+              ->help_text('Перечислите вакансии'),
+      ));
     // product
     Container::make('post_meta', 'Table')
         ->show_on_post_type('post')
@@ -255,23 +267,22 @@ function crb_attach_theme_options1()
             Field::make('image', 'thumb', 'Миниатюра'),
         ));
 }
-add_action('carbon_fields_register_fields', 'crb_attach_theme_options2');
-function crb_attach_theme_options2()
-{
-    // job
-    Container::make('post_meta', 'Вакансии')
-        ->where('post_id', '=', '138')
-        ->add_fields(array(
-            Field::make('complex', 'jobs', 'Работа')
-                ->add_fields(array(
-                    Field::make('text', 'job_name', 'Название'),
-                    Field::make('text', 'job_link', 'Ссылка'),
-                    Field::make("image", "job_img", "Картинка"),
-                )
-                )
-                ->help_text('Перечислите вакансии'),
-        ));
-}
+// add_action('carbon_fields_register_fields', 'crb_attach_theme_options2');
+// function crb_attach_theme_options2()
+// {
+//   Container::make('post_meta', 'Вакансии')
+//       ->where('post_id', '=', '138')
+//       ->add_fields(array(
+//           Field::make('complex', 'jobs', 'Работа')
+//               ->add_fields(array(
+//                   Field::make('text', 'job_name', 'Название'),
+//                   Field::make('text', 'job_link', 'Ссылка'),
+//                   Field::make("image", "job_img", "Картинка"),
+//               )
+//               )
+//               ->help_text('Перечислите вакансии'),
+//       ));
+// }
 // END CarbonFields
 
 // START Post types
