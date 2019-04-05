@@ -63,30 +63,66 @@ $categories = get_categories(array(
 ));
 ?>
             <?PHP
-if ($categories) {
-    // shuffle($categories);
-    $num = 0;
-    foreach ($categories as $category) {
-        if ($num < 4) {
-            // Получаем ID таксономии
-            $term_id = $category->term_id;
-            // получим ID картинки из метаполя термина
-            $term_thumbnail_id = carbon_get_term_meta($term_id, 'thumb');
-            // ссылка на полный размер картинки по ID вложения
-            $term_thumbnail_url = wp_get_attachment_image_url($term_thumbnail_id, 'large');
-            ?>
-              <a class="product-item" href="<?PHP echo get_category_link($category->term_id) ?>" title="<?PHP echo sprintf(__("Вся продукция в категории в %s"), $category->name) ?>"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              if ($categories) {
+                  // shuffle($categories);
+                  $num = 0;
+                  foreach ($categories as $category) {
+                      if ($num < 4) {
+                          // Получаем ID таксономии
+                          $term_id = $category->term_id;
+                          // получим ID картинки из метаполя термина
+                          $term_thumbnail_id = carbon_get_term_meta($term_id, 'thumb');
+                          // ссылка на полный размер картинки по ID вложения
+                          $term_thumbnail_url = wp_get_attachment_image_url($term_thumbnail_id, 'large');
+                          ?>
+                            <a class="product-item" href="<?PHP echo get_category_link($category->term_id) ?>" title="<?PHP echo sprintf(__("Вся продукция в категории в %s"), $category->name) ?>"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="15" cy="15" r="15" fill="#3ECC29" />
+                                <path d="M22.9471 14.6694H15.3306V7H14.6694V14.6694H7V15.3306H14.6694V23H15.3306V15.3306H23V14.6694H22.9471Z" fill="white" /></svg>
+                              <div class="product-item__header"><?PHP echo $category->name ?></div>
+                              <div class="product-item__image" style="background-image:url('<?PHP echo $term_thumbnail_url; ?>')"></div>
+                            </a>
+                            <?PHP
+              $num++;
+                      }
+                  }
+              }
+              ?>
+              <?PHP
+            // вывод рубрики без категории
+            $posts = get_posts(array(
+              'numberposts' => -1,
+              'category' => '1',
+              'orderby' => 'date',
+              'order' => 'DESC',
+              'include' => array(),
+              'exclude' => array(),
+              'meta_key' => '',
+              'meta_value' => '',
+              'post_type' => 'post',
+              'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+          ));
+            foreach ($posts as $post) {
+              if ($num < 4) {
+                setup_postdata($post);
+                // формат вывода the_title() ...
+                ?>
+              <a class="product-item" href="<?PHP echo get_permalink(); ?>" title="product"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="15" cy="15" r="15" fill="#3ECC29" />
                   <path d="M22.9471 14.6694H15.3306V7H14.6694V14.6694H7V15.3306H14.6694V23H15.3306V15.3306H23V14.6694H22.9471Z" fill="white" /></svg>
-                <div class="product-item__header"><?PHP echo $category->name ?></div>
-                <div class="product-item__image" style="background-image:url('<?PHP echo $term_thumbnail_url; ?>')"></div>
+                <div class="product-item__header"><?PHP echo the_title(); ?></div>
+                <?php if (has_post_thumbnail($post->ID)): ?>
+                  <?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'single-post-thumbnail');?>
+                  <div class="product-item__image" style="background-image:url('<?PHP echo $image[0]; ?>')"></div>
+                <?php endif;?>
               </a>
               <?PHP
-$num++;
-        }
-    }
-}
-?>
+              $num++;
+              }
+                  }
+                  ?>
+              <?PHP
+                wp_reset_postdata(); // сброс
+              ?>
           </div>
           <a class="btn-more mobile" href="/products" title="more">Вся продукция<svg width="10" height="20" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M0.656432 19.1095L1.84379 20L9.34375 10L1.84379 -6.55667e-07L0.656434 0.890519L7.4885 10L0.656432 19.1095Z" fill="#3ECC29" /></svg></a>
@@ -118,7 +154,7 @@ $num++;
                 <div class="advantage__header">Металлургия</div>
               </div>
               <div class="advantage">
-                <div class="advantage__img" style="background-image:url('<?PHP bloginfo('template_url');?>/img/advantages/metal.svg')"></div>
+                <div class="advantage__img" style="background-image:url('<?PHP bloginfo('template_url');?>/img/advantages/gas.svg')"></div>
                 <div class="advantage__header">Газовая и нефтяная</div>
               </div>
             </div>
