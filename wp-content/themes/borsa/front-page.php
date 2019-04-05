@@ -64,7 +64,7 @@ $categories = get_categories(array(
 ?>
             <?PHP
 if ($categories) {
-    shuffle($categories);
+    // shuffle($categories);
     $num = 0;
     foreach ($categories as $category) {
         if ($num < 4) {
