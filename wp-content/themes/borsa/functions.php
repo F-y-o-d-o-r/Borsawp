@@ -167,13 +167,22 @@ if (defined('JETPACK__VERSION')) {
 // START Breadcrambs
 function the_breadcrumb()
 {
+    $cat = get_the_category( $post->ID )[0]->cat_ID;
     if (!is_front_page()) {
         echo '<a href="';
         echo get_option('home');
         echo '">Главная';
         echo "</a> / ";
+        if (is_single() && $cat !== 1) {
+          echo "<a href='/products/'>Продукция / </a>";
+        }
+        if (is_single()) {
+          echo "<a href='/products/'>Продукция </a>";
+        }
         if (is_category() || is_single()) {
-            the_category(' ');
+            if($cat !== 1){
+              the_category('/ ');
+            }
             if (is_single()) {
                 echo " / ";
                 the_title();
