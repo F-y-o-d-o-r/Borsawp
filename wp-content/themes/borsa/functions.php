@@ -372,3 +372,6 @@ function special_nav_class($classes, $item)
     return $classes;
 }
 // END добавляем класс к пункту меню
+// add_filter( 'category_link', function($a){
+//   return str_replace( 'category/', '', $a );
+// }, 99 );
