@@ -180,7 +180,7 @@ get_header();
               'order'        => 'ASC',
               'hide_empty'   => 1,
               'hierarchical' => 1,
-              'exclude'      => '',
+              'exclude'      => '1',
               'include'      => '',
               'number'       => 0,
               'pad_counts'   => false,
