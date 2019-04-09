@@ -193,7 +193,14 @@ wp_nav_menu([
     <div class="request-menu-wrapper hidden visuallyhidden">
       <div class="content-wrapper content-wrapper-hidden"><img class="close" src="<?PHP bloginfo('template_url');?>/img/closesort.svg" alt="close">
         <h6>Свяжитесь с нами или оставьте заявку</h6>
-        <div class="contacts-wrapper"><a href="tel<?php echo carbon_get_theme_option('phone_one'); ?>"><?php echo carbon_get_theme_option('phone_one'); ?></a><a href="mailto:<?php echo carbon_get_theme_option('email'); ?>u"><?php echo carbon_get_theme_option('email'); ?></a></div>
+        <div class="contacts-wrapper">
+        <div class="tel-wrapper">
+          <a href="tel<?php echo carbon_get_theme_option('phone_one'); ?>"><?php echo carbon_get_theme_option('phone_one'); ?></a>
+          <a href="tel<?php echo carbon_get_theme_option('phone_two'); ?>"><?php echo carbon_get_theme_option('phone_two'); ?></a>
+        </div>
+
+        <a href="mailto:<?php echo carbon_get_theme_option('email'); ?>u"><?php echo carbon_get_theme_option('email'); ?></a>
+        </div>
         <div class="form-wrapper">
         <?php
 echo do_shortcode('[contact-form-7 id="196" title="popup form"]');
