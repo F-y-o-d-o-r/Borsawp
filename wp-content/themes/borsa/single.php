@@ -170,50 +170,52 @@ get_header();
       <section class="product-page-more-wrapper">
         <div class="container">
           <h3 class="h3">Вас могут заинтересовать</h3>
-          <div class="products-wrapper">
-            <?php
-            $categories = get_categories( array(
-              'taxonomy'     => 'category',
-              'type'         => 'post',
-              'child_of'     => 0,
-              'parent'       => '',
-              'orderby'      => 'name',
-              'order'        => 'ASC',
-              'hide_empty'   => 1,
-              'hierarchical' => 1,
-              'exclude'      => '1',
-              'include'      => '',
-              'number'       => 0,
-              'pad_counts'   => false,
-              // полный список параметров смотрите в описании функции http://wp-kama.ru/function/get_terms
-            ) );
-            ?>
-            <?PHP
-          if( $categories ){
-            shuffle($categories);
-            $num = 0;
-            foreach( $categories as $category ){
-              if($num < 4) {
-              // Получаем ID таксономии
-              $term_id = $category->term_id;
-              // получим ID картинки из метаполя термина
-              $term_thumbnail_id = carbon_get_term_meta( $term_id, 'thumb');
-              // ссылка на полный размер картинки по ID вложения
-              $term_thumbnail_url = wp_get_attachment_image_url( $term_thumbnail_id, 'large' );
+          <div class="overflow">
+            <div class="products-wrapper">
+              <?php
+              $categories = get_categories( array(
+                'taxonomy'     => 'category',
+                'type'         => 'post',
+                'child_of'     => 0,
+                'parent'       => '',
+                'orderby'      => 'name',
+                'order'        => 'ASC',
+                'hide_empty'   => 1,
+                'hierarchical' => 1,
+                'exclude'      => '1',
+                'include'      => '',
+                'number'       => 0,
+                'pad_counts'   => false,
+                // полный список параметров смотрите в описании функции http://wp-kama.ru/function/get_terms
+              ) );
               ?>
-              <a class="product-item" href="<?PHP echo get_category_link( $category->term_id ) ?>" title="<?PHP echo sprintf( __( "Вся продукция в категории в %s" ), $category->name ) ?>"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="15" cy="15" r="15" fill="#3ECC29" />
-                  <path d="M22.9471 14.6694H15.3306V7H14.6694V14.6694H7V15.3306H14.6694V23H15.3306V15.3306H23V14.6694H22.9471Z" fill="white" /></svg>
-                <div class="product-item__header"><?PHP echo $category->name ?></div>
-                <div class="product-item__image" style="background-image:url('<?PHP echo $term_thumbnail_url; ?>')"></div>
-              </a>
               <?PHP
-              $num++;
+            if( $categories ){
+              shuffle($categories);
+              $num = 0;
+              foreach( $categories as $category ){
+                if($num < 4) {
+                // Получаем ID таксономии
+                $term_id = $category->term_id;
+                // получим ID картинки из метаполя термина
+                $term_thumbnail_id = carbon_get_term_meta( $term_id, 'thumb');
+                // ссылка на полный размер картинки по ID вложения
+                $term_thumbnail_url = wp_get_attachment_image_url( $term_thumbnail_id, 'large' );
+                ?>
+                <a class="product-item" href="<?PHP echo get_category_link( $category->term_id ) ?>" title="<?PHP echo sprintf( __( "Вся продукция в категории в %s" ), $category->name ) ?>"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="15" cy="15" r="15" fill="#3ECC29" />
+                    <path d="M22.9471 14.6694H15.3306V7H14.6694V14.6694H7V15.3306H14.6694V23H15.3306V15.3306H23V14.6694H22.9471Z" fill="white" /></svg>
+                  <div class="product-item__header"><?PHP echo $category->name ?></div>
+                  <div class="product-item__image" style="background-image:url('<?PHP echo $term_thumbnail_url; ?>')"></div>
+                </a>
+                <?PHP
+                $num++;
+                }
               }
             }
-          }
-          ?>
+            ?>
             </div>
+          </div>
         </div>
       </section>
     </main>
