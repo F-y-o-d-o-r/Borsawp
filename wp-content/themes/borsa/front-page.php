@@ -106,7 +106,7 @@ $categories = get_categories(array(
                 setup_postdata($post);
                 // формат вывода the_title() ...
                 ?>
-              <a class="product-item" href="<?PHP echo get_permalink(); ?>" title="product"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <a class="product-item" href="<?PHP echo get_permalink(); ?>" title="<?PHP echo the_title(); ?>"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="15" cy="15" r="15" fill="#3ECC29" />
                   <path d="M22.9471 14.6694H15.3306V7H14.6694V14.6694H7V15.3306H14.6694V23H15.3306V15.3306H23V14.6694H22.9471Z" fill="white" /></svg>
                 <div class="product-item__header"><?PHP echo the_title(); ?></div>
@@ -185,7 +185,7 @@ wp_list_sort($posts, $orderby, $order, $preserve_keys);
 foreach ($posts as $post) {
     // формат вывода the_title() ...
     ?>
-                <a class="news__item clearfix" href="<?php echo get_post_permalink($post->ID) ?>" title="title">
+                <a class="news__item clearfix" href="<?php echo get_post_permalink($post->ID) ?>" title="<?PHP echo the_title(); ?>">
                   <div class="news__content">
                     <div class="header">
                       <div class="header__left"><?php echo get_the_date('d'); ?><span><?php echo get_the_date('F Y'); ?></span></div>

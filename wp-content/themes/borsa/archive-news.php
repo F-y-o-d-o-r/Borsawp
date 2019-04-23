@@ -51,7 +51,7 @@ if ($projects->have_posts()):
     while ($projects->have_posts()): $projects->the_post();
         // здесь HTML разметка поста
         ?>
-                  <a class="news__item clearfix" href="<?php echo get_post_permalink($post->ID) ?>" title="title">
+                  <a class="news__item clearfix" href="<?php echo get_post_permalink($post->ID) ?>" title="<?PHP echo the_title(); ?>">
                       <div class="news__content">
                         <div class="header">
                           <div class="header__left"><?php echo get_the_date('d'); ?><span><?php echo get_the_date('F Y'); ?></span></div>

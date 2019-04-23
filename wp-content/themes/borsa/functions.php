@@ -264,8 +264,8 @@ function crb_attach_theme_options()
             Field::make('text', 'link_fb', 'Фейсбук'),
             Field::make('text', 'link_insta', 'Инстаграм'),
             Field::make('text', 'link_youtube', 'Ютуб'),
-            Field::make("file", "price", "ПРАЙС-ЛИСТ")
-                ->set_value_type('url'), // сохранить в метаполе ссылку на файл
+            // Field::make("file", "price", "ПРАЙС-ЛИСТ")
+            //     ->set_value_type('url'), // сохранить в метаполе ссылку на файл
         ));
 }
 add_action('carbon_fields_register_fields', 'crb_attach_theme_options1');

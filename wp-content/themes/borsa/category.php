@@ -40,7 +40,7 @@ $posts = get_posts(array(
                 setup_postdata($post);
                 // формат вывода the_title() ...
                 ?>
-              <a class="product-item" href="<?PHP echo get_permalink(); ?>" title="product"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <a class="product-item" href="<?PHP echo get_permalink(); ?>" title="<?PHP echo the_title(); ?>"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="15" cy="15" r="15" fill="#3ECC29" />
                   <path d="M22.9471 14.6694H15.3306V7H14.6694V14.6694H7V15.3306H14.6694V23H15.3306V15.3306H23V14.6694H22.9471Z" fill="white" /></svg>
                 <div class="product-item__header"><?PHP echo the_title(); ?></div>
